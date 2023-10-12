@@ -75,9 +75,14 @@ const config: Config = {
 				900: "hsl(263, 41%, 10%)",
 				950: "hsl(262, 44%, 5%)"
 			}
+		},
+		extend: {
+			backgroundImage: {
+				"starfield": "url(\"/starfield.svg\")"
+			}
 		}
 	},
-	plugins: [],
+	plugins: []
 };
 
-export default config
+export default config;
