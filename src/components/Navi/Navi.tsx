@@ -4,8 +4,8 @@ import { inter } from "@/Fonts";
 export default function Navi() {
 	return (
 		<div className={clsx(
-			"fixed top-0 w-full bg-background-900 bg-opacity-25 transition-[background-color]",
-			"hover:bg-opacity-100"
+			"fixed top-0 w-full bg-background-900 bg-opacity-10 transition-[background-color]",
+			"hover:bg-opacity-75"
 		)}>
 			<div className={clsx("mx-32 py-5 flex flex-row justify-between text-text-50 text-base", inter.className)}>
 				<a href="#">

@@ -82,6 +82,9 @@ const config: Config = {
 		extend: {
 			backgroundImage: {
 				"starfield": "url(\"/starfield.svg\")"
+			},
+			screens: {
+				"xs": "320px"
 			}
 		}
 	},
