@@ -8,11 +8,14 @@ export default function Hero() {
 		<div className="w-full h-screen">
 			<div className="w-auto h-full flex flex-col justify-center items-center gap-6">
 				<Image
-					width={144}
-					height={144}
+					width={112}
+					height={112}
 					src="/devour-square.png"
 					alt="my profile picture"
-					className="w-36 h-36 rounded-full bg-text-100"
+					className={clsx(
+						"w-28 aspect-square rounded-full bg-text-100",
+						"sm:w-36"
+					)}
 				/>
 
 				<div className={clsx(
@@ -37,22 +40,26 @@ export default function Hero() {
 				</div>
 
 				<div className={clsx(
-					"flex flex-row justify-center items-center gap-6",
+					"flex flex-row justify-center items-center gap-8",
 					inter.className
 				)}>
-					<a
-						href="#about"
-						className="px-3 py-2 min-w-[12ex] bg-secondary-300 rounded-md text-black"
-					>
-						Learn more
-					</a>
+					<div className="basis-0 grow px-3 py-2 bg-secondary-300 rounded-md">
+						<a
+							href="#about"
+							className="inline-block min-w-[10ex] text-black text-center"
+						>
+							Learn more
+						</a>
+					</div>
 
-					<a
-						href="/Resume.pdf"
-						className="mx-3 my-2 min-w-[12ex] text-text-50"
-					>
-						Resumé
-					</a>
+					<div className="basis-0 grow relative right-3">
+						<a
+							href="/resume.pdf"
+							className="mx-3 my-2 inline-block min-w-[10ex] text-text-50 text-center"
+						>
+							Resumé
+						</a>
+					</div>
 				</div>
 			</div>
 		</div>
