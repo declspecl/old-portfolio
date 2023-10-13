@@ -32,7 +32,7 @@ export default function Background() {
 		<div
 			ref={backgroundRef}
 			className={clsx(
-				"fixed left-0 bottom-0 w-full h-full scale-[var(--scale)] -translate-y-[var(--translate)] -z-10 bg-background-900",
+				"fixed left-0 bottom-0 w-full h-full scale-[var(--scale)] -translate-y-[var(--translate)] z-10 bg-background-900",
 				"bg-starfield bg-contain bg-repeat"
 			)}
 		/>

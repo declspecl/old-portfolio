@@ -23,15 +23,16 @@ export default function About() {
 						jbMono.className
 					)}>
 						<h2 className={clsx(
-							"text-3xl",
-							"xl:text-4xl"
+							"text-2xl",
+							"md:text-3xl",
+							"lg:text-4xl"
 						)}>
 							Hello!
 						</h2>
 
 						<h3 className={clsx(
 							"text-xl",
-							"xl:text-2xl"
+							"md:text-2xl"
 						)}>
 							I&apos;m Gavin. I&apos;m a student and software engineer.
 						</h3>
@@ -39,8 +40,7 @@ export default function About() {
 
 					<div className={clsx(
 						"flex flex-col gap-2 text-text-50",
-						"text-sm",
-						"md:text-base",
+						"text-base",
 						"lg:text-lg",
 						"xl:text-xl",
 						inter.className

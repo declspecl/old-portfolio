@@ -10,10 +10,11 @@
 
 html, body {
 	scroll-behavior: smooth;
+	background-color: #16161b;
 }
 
 ::-webkit-scrollbar {
-	background-color: #fff8e7;
+	background-color: #16161b;
 	width: 0.425rem;
 }
 

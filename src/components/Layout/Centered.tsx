@@ -8,13 +8,7 @@ interface CenteredProps {
 export default function Centered({ children }: CenteredProps) {
 	return (
 		<div className={clsx(
-			"mx-auto",
-			"xs:max-w-xs",
-			"sm:max-w-lg",
-			"md:max-w-screen-sm",
-			"lg:max-w-screen-md",
-			"xl:max-w-screen-lg",
-			"2xl:max-w-screen-xl"
+			"relative w-4/5 max-w-screen-lg mx-auto z-20"
 		)}>
 			{children}
 		</div>
