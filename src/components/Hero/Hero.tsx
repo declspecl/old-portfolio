@@ -40,7 +40,8 @@ export default function Hero() {
 				</div>
 
 				<div className={clsx(
-					"flex flex-row justify-center items-center gap-8",
+					"flex flex-col justify-center items-center gap-2",
+					"sm:flex-row sm:gap-6",
 					inter.className
 				)}>
 					<div className="basis-0 grow px-3 py-2 bg-secondary-300 rounded-md">
@@ -52,7 +53,10 @@ export default function Hero() {
 						</a>
 					</div>
 
-					<div className="basis-0 grow relative right-3">
+					<div className={clsx(
+						"basis-0 grow relative right-0",
+						"sm:right-3"
+					)}>
 						<a
 							href="/resume.pdf"
 							className="mx-3 my-2 inline-block min-w-[10ex] text-text-50 text-center"
