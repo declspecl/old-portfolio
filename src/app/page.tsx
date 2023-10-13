@@ -16,10 +16,12 @@ export default function Home() {
 
 			<Centered>
 				<Hero />
-				<About />
-				<Projects />
-				<Skills />
-				<Contact />
+				<div className="flex flex-col gap-20">
+					<About />
+					<Projects />
+					<Skills />
+					<Contact />
+				</div>
 			</Centered>
 		</div>
 	);

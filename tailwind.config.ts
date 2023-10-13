@@ -75,9 +75,7 @@ const config: Config = {
 				800: "hsl(261, 41%, 20%)",
 				900: "hsl(263, 41%, 10%)",
 				950: "hsl(262, 44%, 5%)"
-			},
-
-			"black": "hsl(0, 0%, 0%)"
+			}
 		},
 		extend: {
 			backgroundImage: {
@@ -85,6 +83,9 @@ const config: Config = {
 			},
 			screens: {
 				"xs": "320px"
+			},
+			data: {
+				"state-open": "state~=open"
 			}
 		}
 	},

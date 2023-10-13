@@ -47,7 +47,7 @@ export default function Hero() {
 					<div className="basis-0 grow px-3 py-2 bg-secondary-300 rounded-md">
 						<a
 							href="#about"
-							className="inline-block min-w-[10ex] text-black text-center"
+							className="inline-block min-w-[10ex] text-background-900 text-center"
 						>
 							Learn more
 						</a>
@@ -59,6 +59,7 @@ export default function Hero() {
 					)}>
 						<a
 							href="/resume.pdf"
+							target="_blank"
 							className="mx-3 my-2 inline-block min-w-[10ex] text-text-50 text-center"
 						>
 							Resumé

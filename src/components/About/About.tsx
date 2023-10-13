@@ -12,7 +12,7 @@ export default function About() {
 			<div className={clsx(
 				"gap-4",
 				"flex flex-col-reverse",
-				"md:grid md:grid-cols-2"
+				"md:grid md:grid-cols-2",
 			)}>
 				{/* information column */}
 				<div className={clsx(
@@ -32,14 +32,14 @@ export default function About() {
 
 						<h3 className={clsx(
 							"text-xl",
-							"md:text-2xl"
+							"lg:text-2xl"
 						)}>
 							I&apos;m Gavin. I&apos;m a student and software engineer.
 						</h3>
 					</div>
 
 					<div className={clsx(
-						"flex flex-col gap-2 text-text-50",
+						"flex flex-col gap-3 text-text-50",
 						"text-base",
 						"lg:text-lg",
 						"xl:text-xl",
@@ -47,6 +47,9 @@ export default function About() {
 					)}>
 						<p>
 							I have been teaching myself programming for over 7 years, and it is by far my greatest passion.
+						</p>
+
+						<p>
 							In high school, I went to an International Baccalaureate school, graduating as a valedictorian with a 4.2 GPA.
 							Currently, I attend Oakland University as a Computer Science major.
 						</p>
