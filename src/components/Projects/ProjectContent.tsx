@@ -7,10 +7,11 @@ interface ProjectContentProps {
 	description: string,
 	technologies: string[],
 	repoLink?: string,
-	siteLink?: string
+	siteLink?: string,
+	rtl?: boolean
 }
 
-export default function ProjectContent({ imagePath, description, technologies, repoLink, siteLink }: ProjectContentProps) {
+export default function ProjectContent({ imagePath, description, technologies, repoLink, siteLink, rtl }: ProjectContentProps) {
 	return (
 		<div className={clsx(
 			"flex flex-col gap-4",
@@ -43,7 +44,7 @@ export default function ProjectContent({ imagePath, description, technologies, r
 							<div
 								key={`technology-${index + 1}`}
 								className={clsx(
-									"px-2.5 py-1 rounded-full text-base text-background-900 bg-secondary-300"
+									"px-2.5 py-1 rounded-full text-base text-background-900 bg-primary-200"
 								)}
 							>
 								{technology}

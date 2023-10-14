@@ -13,8 +13,8 @@ export default function SectionText({ id, className, children }: SectionTextProp
 			id={id}
 			className={clsx(
 				"inline-block bg-gradient-to-r from-secondary-300 to-accent-600 text-text-50 text-opacity-0 bg-clip-text text-center",
-				"lg:text-5xl",
 				"text-4xl",
+				"lg:text-5xl",
 				inter.className,
 				// jbMono.className,
 				className

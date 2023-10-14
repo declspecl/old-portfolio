@@ -1,11 +1,13 @@
-import clsx from "clsx";
+"use client";
 
+import clsx from "clsx";
 import { inter, jbMono } from "@/Fonts";
 import Image from "next/image";
+import TypedGreeting from "./TypedGreeting";
 
 export default function Hero() {
 	return (
-		<div className="w-full h-screen">
+		<section className="w-full h-screen">
 			<div className="w-auto h-full flex flex-col justify-center items-center gap-6">
 				<Image
 					width={112}
@@ -22,13 +24,15 @@ export default function Hero() {
 					"flex flex-col gap-2 text-text-50 text-center",
 					"xl:w-3/4"
 				)}>
-					<p className={clsx(
-						"text-2xl",
-						"lg:text-4xl",
-						jbMono.className
-					)}>
-						Hi! I&apos;m Gavin D&apos;Hondt.
-					</p>
+					<TypedGreeting
+						targetText="Hi! I'm Gavin D'Hondt."
+						// delay={1000}
+						className={clsx(
+							"text-2xl",
+							"lg:text-4xl",
+							jbMono.className
+						)}
+					/>
 
 					<p className={clsx(
 						"text-base",
@@ -67,6 +71,6 @@ export default function Hero() {
 					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 	);
 }

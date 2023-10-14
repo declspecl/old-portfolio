@@ -7,7 +7,7 @@ import * as Separator from "@radix-ui/react-separator";
 
 export default function Projects() {
 	return (
-		<div>
+		<section className="flex flex-col gap-8">
 			<div className="flex flex-row justify-center items-center">
 				<SectionText id="projects">Projects</SectionText>
 			</div>
@@ -29,6 +29,7 @@ export default function Projects() {
 					description="I made this website for my friend Haley Puri as a way for him to easily display his art as well as advertise himself."
 					technologies={["React", "Next.js", "TailwindCSS", "Radix UI", "framer-motion", "Resend"]}
 					siteLink="https://haleypuri.com"
+					rtl
 				/>
 
 				<Separator.Root decorative orientation="horizontal" className="w-full h-[1px] bg-text-50 opacity-50" />
@@ -41,6 +42,6 @@ export default function Projects() {
 					repoLink="https://github.com/declspecl/pow"
 				/>
 			</Accordion.Root>
-		</div>
+		</section>
 	);
 }

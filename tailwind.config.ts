@@ -86,6 +86,18 @@ const config: Config = {
 			},
 			data: {
 				"state-open": "state~=open"
+			},
+			keyframes: {
+				blink: {
+					"0%": { opacity: "1" },
+					"49.99%": { opacity: "1" },
+					"50%": { opacity: "0" },
+					"99.99%": { opacity: "0" },
+					"100%": { opacity: "1" }
+				}
+			},
+			animation: {
+				blink: "blink 1.35s infinite"
 			}
 		}
 	},

@@ -11,10 +11,11 @@ interface ProjectProps {
 	description: string,
 	technologies: string[],
 	repoLink?: string,
-	siteLink?: string
+	siteLink?: string,
+	rtl?: boolean
 }
 
-export default function Project({ projectName, imagePath, description, technologies, repoLink, siteLink }: ProjectProps) {
+export default function Project({ projectName, imagePath, description, technologies, repoLink, siteLink, rtl }: ProjectProps) {
 	const projectNameValue = projectName.toLowerCase().replace(" ", "-");
 
 	return (
@@ -50,6 +51,7 @@ export default function Project({ projectName, imagePath, description, technolog
 					technologies={technologies}
 					repoLink={repoLink}
 					siteLink={siteLink}
+					rtl
 				/>
 			</Accordion.Content>
 		</Accordion.Item>
