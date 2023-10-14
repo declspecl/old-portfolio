@@ -3,21 +3,15 @@
 import clsx from "clsx";
 import React, { useEffect } from "react";
 
-const MAX_ADDITIONAL_SCALE_PROPORTION: number = 0.1;
+const SCALE_FACTOR = 0.045;
 
 export default function Background() {
 	const backgroundRef = React.useRef<HTMLDivElement>(null!);
 
 	function updateBackgroundScale() {
-		const documentElement = window.document.documentElement;
-		
-		const scrollRatio = documentElement.scrollTop / (documentElement.scrollHeight - documentElement.clientHeight);
-
-		const newScale = 1 + (scrollRatio * MAX_ADDITIONAL_SCALE_PROPORTION);
-		const newTranslation = scrollRatio * MAX_ADDITIONAL_SCALE_PROPORTION * 35;
+		const newScale = 1 + ((window.document.documentElement.scrollTop / 1000) * SCALE_FACTOR);
 
 		backgroundRef.current.style.setProperty("--scale", `${newScale}`);
-		backgroundRef.current.style.setProperty("--translate", `${newTranslation}%`);
 	}
 
 	useEffect(() => {
@@ -32,7 +26,7 @@ export default function Background() {
 		<div
 			ref={backgroundRef}
 			className={clsx(
-				"fixed left-0 bottom-0 w-full h-full scale-[var(--scale)] -translate-y-[var(--translate)] z-10 bg-background-900",
+				"fixed left-0 bottom-0 w-full h-full scale-[var(--scale)] z-10 bg-background-900",
 				"bg-starfield bg-contain bg-repeat"
 			)}
 		/>

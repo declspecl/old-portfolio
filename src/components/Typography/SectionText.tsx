@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { inter, jbMono } from "@/Fonts";
+import { jbMono } from "@/Fonts";
 
 interface SectionTextProps {
 	className?: string
@@ -13,8 +13,7 @@ export default function SectionText({ className, children }: SectionTextProps) {
 				"inline-block bg-gradient-to-r from-secondary-300 to-accent-600 text-text-50 text-opacity-0 bg-clip-text text-center",
 				"text-4xl",
 				"lg:text-5xl",
-				inter.className,
-				// jbMono.className,
+				jbMono.className,
 				className
 			)}
 		>

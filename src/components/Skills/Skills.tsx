@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { inter } from "@/Fonts";
 import SkillGroup from "./SkillGroup";
-import SectionText from "../Typography/SectionText";
+import SectionText from "@/components/Typography/SectionText";
 
 export default function Skills() {
 	return (

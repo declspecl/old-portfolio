@@ -1,53 +1,11 @@
 "use client";
 
 import clsx from "clsx";
-import { useRef } from "react";
 import { inter } from "@/Fonts";
-import * as Form from "@radix-ui/react-form";
-import { CircleDot, CircleEqual, CircleIcon, MailIcon } from "lucide-react";
-import SectionText from "../Typography/SectionText";
+import { CircleIcon, MailIcon } from "lucide-react";
+import SectionText from "@/components/Typography/SectionText";
 
 export default function Contact() {
-	const nameRef = useRef<HTMLInputElement>(null!);
-	const emailRef = useRef<HTMLInputElement>(null!);
-	const messageRef = useRef<HTMLTextAreaElement>(null!);
-
-	async function sendEmail() {
-		const name = nameRef.current.value;
-		const email = emailRef.current.value;
-		const message = messageRef.current.value;
-
-		const apiAuthUsername = process.env.API_AUTH_USERNAME;
-		const apiAuthPassword = process.env.API_AUTH_PASSWORD;
-		const toEmails = process.env.TO_EMAILS;
-
-		const res = await fetch("/api/email", {
-			method: "POST",
-			headers: {
-				"Content-Type": "application/json"
-			},
-			body: JSON.stringify({ name, email, message, apiAuthUsername, apiAuthPassword, toEmails })
-		});
-
-		if (res.status !== 200) {
-			console.error("Failed to send email");
-
-			nameRef.current.value = "";
-			emailRef.current.value = "";
-			messageRef.current.value = "";
-		}
-		else {
-			console.log("Email sent!");
-		}
-
-		return res;
-	}
-
-	async function handleFormSubmit(e: React.FormEvent<HTMLFormElement>) {
-		sendEmail()
-
-	}
-
 	return (
 		<section id="contact" className={clsx(
 			"flex flex-col items-center gap-6 text-lg",
@@ -62,12 +20,15 @@ export default function Contact() {
 					"text-lg text-text-50 text-center",
 					"xl:inline-block xl:w-3/4 xl:mx-auto"
 				)}>
-					Thanks for contacting me! Feel free to use this form to send me a message. Alternatively, you can reach me using any of the following socials:
+					Thanks for contacting me! Feel free to use this form to send me a message. Alternatively, you can reach me using any of the following:
 				</p>
 
 				<div className="-mt-4 w-full flex flex-row flex-wrap justify-center items-center gap-4 text-text-50">
 					<div className="flex flex-row items-center gap-1">
 						<img
+							width={22}
+							height={16}
+							alt="Discord logo"
 							src="/discord-logo.png"
 							className="h-[1em] aspect-auto"
 						/>
@@ -91,100 +52,9 @@ export default function Contact() {
 
 						<a href="mailto:gavind2559@gmail.com">gavind2559@gmail.com</a>
 					</div>
-
-					<CircleIcon
-						className={clsx(
-							"h-[0.35em] w-[0.35em] stroke-text-50 fill-text-50 hidden",
-							"md:inline-block"
-						)}
-					/>
-
-					<div className="flex flex-row items-center gap-1">
-						<img
-							width={22}
-							height={16}
-							alt="Discord logo"
-							src="/discord-logo.png"
-							className="h-[1em] aspect-auto"
-						/>
-
-						<span>declspecl</span>
-					</div>
 				</div>
 			</div>
 				
-			<Form.Root
-				onSubmit={() => sendEmail()}
-				className="w-full flex flex-col items-center gap-4"
-			>
-				<Form.Field className="w-full" name="name">
-					<div className="flex flex-col">
-						<Form.Label className="text-text-50">Name</Form.Label>
-
-						<Form.Control
-							ref={nameRef}
-							className={clsx(
-								"px-2.5 py-1.5 text-background-900 bg-background-50 rounded-md border-2 border-background-50",
-								"focus:border-primary-500 focus:!outline-none"
-							)}
-						/>
-					</div>
-				</Form.Field>
-
-				<Form.Field name="email" className="w-full">
-					<div className="flex flex-col">
-						<div className="flex flex-row justify-between text-text-50">
-							<Form.Label>Email *</Form.Label>
-
-							<Form.Message match="valueMissing" className="text-secondary-300">
-								Please enter an email
-							</Form.Message>
-
-							<Form.Message match="typeMismatch" className="text-secondary-300">
-								Please enter a valid email
-							</Form.Message>
-						</div>
-
-						<Form.Control
-							type="email"
-							ref={emailRef}
-							className={clsx(
-								"px-2.5 py-1.5 text-background-900 bg-background-50 rounded-md border-2 border-background-50",
-								"focus:border-primary-500 focus:!outline-none"
-							)}
-							required
-						/>
-					</div>
-
-				</Form.Field>
-
-				<Form.Field className="w-full" name="message">
-					<div className="flex flex-col">
-						<div className="flex flex-row justify-between">
-							<Form.Label className="text-text-50">Message *</Form.Label>
-
-							<Form.Message match="valueMissing" className="text-secondary-300">
-								Please enter a message
-							</Form.Message>
-						</div>
-
-						<Form.Control asChild>
-							<textarea
-								required
-								ref={messageRef}
-								className={clsx(
-									"px-3 py-1.5 min-h-[6em] text-background-900 bg-background-50 rounded-md border-2 border-background-50",
-									"focus:border-primary-500 focus:!outline-none"
-								)}
-							/>
-						</Form.Control>
-					</div>
-				</Form.Field>
-
-				<Form.Submit className="px-5 py-1.5 text-background-900 bg-secondary-300 text-xl text-center rounded-md resize-y">
-					Send
-				</Form.Submit>
-			</Form.Root>
 		</section>
 	);
 }

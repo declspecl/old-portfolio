@@ -1,9 +1,9 @@
 "use client";
 
 import Project from "./Project";
-import SectionText from "../Typography/SectionText";
 import * as Accordion from "@radix-ui/react-accordion";
 import * as Separator from "@radix-ui/react-separator";
+import SectionText from "@/components/Typography/SectionText";
 
 export default function Projects() {
 	return (

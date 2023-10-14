@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import { inter, jbMono } from "@/Fonts";
-import SectionText from "../Typography/SectionText";
+import SectionText from "@/components/Typography/SectionText";
 
 export default function About() {
 	return (
@@ -23,7 +23,7 @@ export default function About() {
 						jbMono.className
 					)}>
 						<h2 className={clsx(
-							"text-2xl",
+							"text-primary-200 text-2xl",
 							"md:text-3xl",
 							"lg:text-4xl"
 						)}>
@@ -46,7 +46,7 @@ export default function About() {
 						inter.className
 					)}>
 						<p>
-							I have been teaching myself programming for over 7 years, and it is by far my greatest passion.
+							I have been learning programming for over 6 years, and it is by far my greatest passion.
 						</p>
 
 						<p>
@@ -56,8 +56,7 @@ export default function About() {
 
 						<p>
 							Outside of academics, I love playing video games, playing instruments, and, generally, learning.
-							To me, learning is always exciting and enriching, no matter the topic.
-							I strive to learn from every aspect of my life, and this philosophy has largely shaped me into the person I am today.
+							I love learning about people, languages, and various other topics.
 						</p>
 					</div>
 				</div>

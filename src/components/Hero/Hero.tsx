@@ -1,8 +1,8 @@
 "use client";
 
 import clsx from "clsx";
-import { inter, jbMono } from "@/Fonts";
 import Image from "next/image";
+import { inter, jbMono } from "@/Fonts";
 import TypedGreeting from "./TypedGreeting";
 
 export default function Hero() {
@@ -15,7 +15,7 @@ export default function Hero() {
 					src="/devour-square.png"
 					alt="my profile picture"
 					className={clsx(
-						"w-28 aspect-square rounded-full bg-text-100",
+						"w-28 aspect-square rounded-full bg-text-100 drop-shadow-hero",
 						"sm:w-36"
 					)}
 				/>
