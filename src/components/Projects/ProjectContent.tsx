@@ -1,8 +1,10 @@
 import clsx from "clsx";
 import { inter } from "@/Fonts";
 import { ArrowUpRightIcon } from "lucide-react";
+import Image from "next/image";
 
 interface ProjectContentProps {
+	name: string,
 	imagePath: string,
 	description: string,
 	technologies: string[],
@@ -11,7 +13,7 @@ interface ProjectContentProps {
 	rtl?: boolean
 }
 
-export default function ProjectContent({ imagePath, description, technologies, repoLink, siteLink, rtl }: ProjectContentProps) {
+export default function ProjectContent({ name, imagePath, description, technologies, repoLink, siteLink, rtl }: ProjectContentProps) {
 	return (
 		<div className={clsx(
 			"flex flex-col gap-4",
@@ -19,7 +21,10 @@ export default function ProjectContent({ imagePath, description, technologies, r
 			inter.className
 		)}>
 			<img
+				width={540}
+				height={304}
 				src={imagePath}
+				alt={`Image of my project ${name}`}
 				className={clsx(
 					"w-auto",
 					"lg:w-full"
@@ -75,7 +80,7 @@ export default function ProjectContent({ imagePath, description, technologies, r
 								"flex flex-row items-center text-text-50 underline"
 							)}
 						>
-							<span>View Site</span>
+							<span>View Website</span>
 							<ArrowUpRightIcon className="w-[1em] h-[1em]" />
 						</a>
 					)}

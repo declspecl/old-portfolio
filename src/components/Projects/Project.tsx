@@ -6,7 +6,7 @@ import { ChevronDownIcon } from "lucide-react";
 import * as Accordion from "@radix-ui/react-accordion";
 
 interface ProjectProps {
-	projectName: string,
+	name: string,
 	imagePath: string,
 	description: string,
 	technologies: string[],
@@ -15,11 +15,11 @@ interface ProjectProps {
 	rtl?: boolean
 }
 
-export default function Project({ projectName, imagePath, description, technologies, repoLink, siteLink, rtl }: ProjectProps) {
-	const projectNameValue = projectName.toLowerCase().replace(" ", "-");
+export default function Project({ name, imagePath, description, technologies, repoLink, siteLink, rtl }: ProjectProps) {
+	const nameValue = name.toLowerCase().replace(" ", "-");
 
 	return (
-		<Accordion.Item value={projectNameValue} className="w-full group">
+		<Accordion.Item value={nameValue} className="w-full group">
 			<Accordion.Trigger className={clsx(
 				"w-full flex flex-row justify-between items-center text-2xl",
 				"sm:text-4xl"
@@ -32,7 +32,7 @@ export default function Project({ projectName, imagePath, description, technolog
 						jbMono.className
 					)}
 				>
-					{projectName}
+					{name}
 				</h2>
 
 				<ChevronDownIcon
@@ -46,6 +46,7 @@ export default function Project({ projectName, imagePath, description, technolog
 
 			<Accordion.Content className="my-4">
 				<ProjectContent
+					name={name}
 					imagePath={imagePath}
 					description={description}
 					technologies={technologies}

@@ -7,7 +7,7 @@ const config: Config = {
 	theme: {
 		colors: {
 			"text": {
-				50: "hsl(42, 100%, 95%)", // default
+				50: "hsl(42, 100%, 100%)", // default
 				100: "hsl(42, 100%, 90%)",
 				200: "hsl(42, 100%, 80%)",
 				300: "hsl(42, 100%, 70%)",
