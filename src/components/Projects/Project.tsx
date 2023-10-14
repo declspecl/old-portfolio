@@ -26,8 +26,8 @@ export default function Project({ name, imagePath, description, technologies, re
 			)}>
 				<h2
 					className={clsx(
-						"text-background-800 transition-[color] text-left",
-						"group-hover:text-background-700",
+						"text-background-700 transition-[color] text-left",
+						"group-hover:text-background-600",
 						"group-data-state-open:text-text-50",
 						jbMono.className
 					)}
