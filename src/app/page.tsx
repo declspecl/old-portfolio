@@ -16,7 +16,7 @@ export default function Home() {
 
 			<Centered>
 				<Hero />
-				<div className="flex flex-col gap-20">
+				<div className="flex flex-col gap-24 mb-12">
 					<About />
 					<Projects />
 					<Skills />

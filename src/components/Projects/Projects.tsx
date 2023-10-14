@@ -7,9 +7,9 @@ import * as Separator from "@radix-ui/react-separator";
 
 export default function Projects() {
 	return (
-		<section className="flex flex-col gap-8">
+		<section id="projects" className="flex flex-col gap-8">
 			<div className="flex flex-row justify-center items-center">
-				<SectionText id="projects">Projects</SectionText>
+				<SectionText>Projects</SectionText>
 			</div>
 
 			<Accordion.Root type="multiple" className="flex flex-col gap-4">

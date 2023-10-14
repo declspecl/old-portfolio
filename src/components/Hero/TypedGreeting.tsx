@@ -29,11 +29,10 @@ export default function TypedGreeting({ targetText, className, delay }: TypedGre
 			{currentText}
 			<span
 				className={clsx(
-					"align-middle inline-block w-[1ex] h-[1em] bg-text-50",
+					"align-middle -translate-y-0.5 inline-block w-[0.5em] h-[1em] bg-text-50",
 					{ "animate-blink" : currentText === targetText || currentText === "" }
 				)}
 			>
-
 			</span>
 		</p>
 	);

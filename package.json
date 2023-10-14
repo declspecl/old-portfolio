@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.1.2",
+    "@radix-ui/react-form": "^0.0.3",
     "@radix-ui/react-separator": "^1.0.3",
     "@react-spring/web": "^9.7.3",
     "clsx": "^2.0.0",

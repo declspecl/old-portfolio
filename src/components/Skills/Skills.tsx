@@ -5,9 +5,9 @@ import SectionText from "../Typography/SectionText";
 
 export default function Skills() {
 	return (
-		<section className="flex flex-col gap-8">
+		<section id="skills" className="flex flex-col gap-8">
 			<div className="flex flex-row justify-center items-center">
-				<SectionText id="skills">Skills</SectionText>
+				<SectionText>Skills</SectionText>
 			</div>
 
 			<div className="flex flex-col gap-12">
