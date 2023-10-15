@@ -1,5 +1,9 @@
+"use client";
+
 import clsx from "clsx";
+import { useRef } from "react";
 import { inter, jbMono } from "@/Fonts";
+import { useInView } from "framer-motion";
 
 interface SkillGroupProps {
 	title: string,
@@ -8,8 +12,21 @@ interface SkillGroupProps {
 }
 
 export default function SkillGroup({ title, skills, className }: SkillGroupProps) {
+    const ref = useRef<HTMLDivElement>(null!);
+    const isInView = useInView(ref, { once: true });
+
 	return (
-		<div className={clsx("flex flex-col items-center gap-3", className)}>
+		<div
+            ref={ref}
+            style={{
+                opacity: isInView ? 1 : 0,
+                transform: isInView ? "translateY(0)" : "translateY(75px)"
+            }}
+            className={clsx(
+                "flex flex-col items-center gap-3 opacity-0 translate-y-[75px] transition-all duration-300",
+                className
+            )}
+        >
 			<h2 className={clsx(
 				"inline-block bg-gradient-to-r from-primary-200 to-accent-500 text-text-50 text-opacity-0 bg-clip-text",
 				"text-3xl text-center",

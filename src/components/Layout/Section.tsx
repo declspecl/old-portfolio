@@ -2,7 +2,7 @@
 
 import clsx from "clsx";
 import React, { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { useInView } from "framer-motion";
 
 interface SectionProps {
     className?: string,
@@ -14,18 +14,18 @@ export default function Section({ className, children }: SectionProps) {
     const isInView = useInView(ref, { once: true });
 
     return (
-        <motion.section
+        <section
             ref={ref}
             style={{
                 opacity: isInView ? 1 : 0,
-                y: isInView ? 0 : 100
+                transform: isInView ? "translateY(0)" : "translateY(100px)"
             }}
             className={clsx(
-                "flex flex-col gap-6 opacity-0 translate-y-[50px] transition-all duration-300",
+                "flex flex-col gap-6 opacity-0 translate-y-[100px] transition-all duration-300",
                 className
             )}
         >
             {children}
-        </motion.section>
+        </section>
     );
 }
