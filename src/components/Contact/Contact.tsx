@@ -22,7 +22,7 @@ export default function Contact() {
 						"text-lg text-text-50 text-center",
 						"xl:inline-block xl:w-3/4 xl:mx-auto"
 					)}>
-						Thanks for reaching out to me! Feel free to use this form to send me an message. Alternatively, <a href="mailto:gavind2559@gmail.com" className="underline">send me an email</a>.
+						Thanks for reaching out to me! Feel free to use this form to send me a message. Alternatively, <a href="mailto:gavind2559@gmail.com" className="underline">send me an email</a>.
 					</p>
 
 					<p className={clsx(

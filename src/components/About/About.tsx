@@ -50,7 +50,8 @@ export default function About() {
 						</p>
 
 						<p>
-							In high school, I went to an International Baccalaureate school, graduating as a valedictorian with a 4.2 GPA.
+							I went to an International Baccalaureate high school, graduating as a valedictorian with a 4.2 GPA.
+							During this time, I took HL IB Computer Science, receiving a 7 on my IA and a 5 on the exam.
 							Currently, I attend Oakland University as a Computer Science major.
 						</p>
 
