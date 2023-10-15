@@ -14,7 +14,15 @@ export default function Navi() {
 				"xl:mx-32 xl:w-auto",
 				inter.className
 			)}>
-				<a href="#" className="hover:scale-105">Gavin D&apos;Hondt</a>
+				<a
+					href="#"
+					className={clsx(
+						"transition-[transform]",
+						"hover:scale-105"
+					)}
+				>
+					Gavin D&apos;Hondt
+				</a>
 
 				<div className={clsx(
 					"hidden flex-row gap-8",
