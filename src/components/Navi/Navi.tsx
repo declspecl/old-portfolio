@@ -4,7 +4,8 @@ import { inter } from "@/Fonts";
 export default function Navi() {
 	return (
 		<div className={clsx(
-			"fixed top-0 z-30 w-full bg-background-900 bg-opacity-50 transition-[background-color]",
+			"hidden fixed top-0 z-30 w-full bg-background-900 bg-opacity-50 transition-[background-color]",
+			"md:block",
 			"hover:bg-opacity-90"
 		)}>
 			<div className={clsx(
@@ -13,20 +14,18 @@ export default function Navi() {
 				"xl:mx-32 xl:w-auto",
 				inter.className
 			)}>
-				<a href="#">
-					<span>Gavin D&apos;Hondt</span>
-				</a>
+				<a href="#" className="hover:scale-105">Gavin D&apos;Hondt</a>
 
 				<div className={clsx(
 					"hidden flex-row gap-8",
 					"md:flex"
 				)}>
-					<a href="#">Home</a>
-					<a href="#about">About</a>
-					<a href="#projects">Projects</a>
-					<a href="#skills">Skills</a>
-					<a href="#contact">Contact</a>
-					<a href="/resume.pdf" target="_blank">Resumé</a>
+					<a href="#" className="hover:underline">Home</a>
+					<a href="#about" className="hover:underline">About</a>
+					<a href="#projects" className="hover:underline">Projects</a>
+					<a href="#skills" className="hover:underline">Skills</a>
+					<a href="#contact" className="hover:underline">Contact</a>
+					<a href="/resume.pdf" target="_blank" className="hover:underline">Resumé</a>
 				</div>
 			</div>
 		</div>

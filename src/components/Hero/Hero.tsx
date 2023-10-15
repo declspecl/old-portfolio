@@ -73,7 +73,10 @@ export default function Hero() {
 						<a
 							href="/resume.pdf"
 							target="_blank"
-							className="mx-3 my-2 inline-block min-w-[10ex] text-text-50 text-center"
+							className={clsx(
+								"mx-3 my-2 inline-block min-w-[10ex] text-text-50 text-center",
+								"hover:underline"
+							)}
 						>
 							Resumé
 						</a>
