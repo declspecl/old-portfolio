@@ -1,10 +1,9 @@
 "use client";
 
 import clsx from "clsx";
-import Image from "next/image";
+import { motion } from "framer-motion";
 import { inter, jbMono } from "@/Fonts";
 import TypedGreeting from "./TypedGreeting";
-import { motion } from "framer-motion";
 
 export default function Hero() {
 	const variants = {
@@ -19,13 +18,13 @@ export default function Hero() {
 	return (
 		<motion.section className="w-full h-screen" variants={variants} initial="initial" animate="animate">
 			<div className="w-auto h-full flex flex-col justify-center items-center gap-6">
-				<Image
+				<img
 					width={112}
 					height={112}
-					src="/devour-square.png"
+					src="/profile-picture.png"
 					alt="my profile picture"
 					className={clsx(
-						"w-28 aspect-square rounded-full bg-text-100 drop-shadow-hero",
+						"w-28 aspect-square rounded-full bg-text-100 drop-shadow-hero transform-gpu",
 						"sm:w-36"
 					)}
 				/>

@@ -2,9 +2,13 @@ import "./globals.css"
 import { inter } from "@/Fonts";
 import type { Metadata } from "next"
 
-export const metadata: Metadata = {
-	title: "Gavin D'Hondt Portfolio",
-	description: "Gavin D'Hondt's Portfolio"
+export const metadata: Metadata =
+{
+	title: "Gavin D'Hondt",
+	description: "I'm Gavin D'Hondt. I'm a software engineer studying Computer Science at Oakland University. I'm actively seeking internship opportunities and freelance web development jobs.",
+	authors: { name: "Gavin D'Hondt" },
+	keywords: ["Software engineer", "Student", "Rust", "C++", "Tauri", "React", "Web developer", "Oakland University", "Michigan", "Programmer"],
+	colorScheme: "dark"
 }
 
 interface RootLayoutProps {
