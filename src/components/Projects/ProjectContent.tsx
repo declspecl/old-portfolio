@@ -72,7 +72,7 @@ export default function ProjectContent({ name, imagePath, description, technolog
 							<div
 								key={`technology-${index + 1}`}
 								className={clsx(
-									"px-2.5 py-1 rounded-full text-base text-background-900 bg-secondary-300"
+									"px-2.5 py-1 rounded-full text-base text-background-950 bg-secondary-300"
 								)}
 							>
 								{technology}

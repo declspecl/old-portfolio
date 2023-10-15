@@ -17,7 +17,7 @@ export default function Skills() {
 					"xl:w-3/4 xl:mx-auto",
 					inter.className
 				)}>
-					Most of all, I love working with low level languages, and I spend most of time working in Rust or C++. I also enjoy web development, so I have gathered a wide range of skills from various different branches of computer science.
+					Most of all, I love working with low level languages, and I spend most of my time working in Rust or C++. I also enjoy web development, so I have gathered a wide range of skills from various different branches of computer science.
 				</p>
 
 				<div className={clsx(
