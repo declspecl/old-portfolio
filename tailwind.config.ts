@@ -99,7 +99,7 @@ const config: Config = {
 				blink: "blink 1.35s infinite"
 			},
 			dropShadow: {
-				"hero": "0 100px 200px rgba(255, 255, 255, 0.325)"
+				"hero": "0 100px 200px rgba(255, 255, 255, 0.45)"
 			}
 		}
 	},

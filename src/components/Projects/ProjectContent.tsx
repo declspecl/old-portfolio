@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { inter } from "@/Fonts";
 import { ArrowUpRightIcon } from "lucide-react";
-import Image from "next/image";
+import { motion, Variants } from "framer-motion";
 
 interface ProjectContentProps {
 	name: string,
@@ -9,17 +9,40 @@ interface ProjectContentProps {
 	description: string,
 	technologies: string[],
 	repoLink?: string,
-	siteLink?: string,
-	rtl?: boolean
+	siteLink?: string
 }
 
-export default function ProjectContent({ name, imagePath, description, technologies, repoLink, siteLink, rtl }: ProjectContentProps) {
+export default function ProjectContent({ name, imagePath, description, technologies, repoLink, siteLink }: ProjectContentProps) {
+	const variants: Variants = {
+		initial: {
+			height: 0,
+			marginTop: 0,
+			opacity: 0
+		},
+		animate: {
+			height: "auto",
+			marginTop: "12px",
+			opacity: 1
+		},
+		exit: {
+			height: 0,
+			marginTop: 0,
+			opacity: 0
+		}
+	};
+
 	return (
-		<div className={clsx(
-			"flex flex-col gap-4",
-			"lg:grid lg:grid-cols-2",
-			inter.className
-		)}>
+		<motion.div
+			variants={variants}
+			initial="initial"
+			animate="animate"
+			exit="exit"
+			className={clsx(
+				"flex flex-col gap-4 overflow-hidden",
+				"lg:grid lg:grid-cols-2",
+				inter.className
+			)}
+		>
 			<img
 				width={540}
 				height={304}
@@ -86,7 +109,6 @@ export default function ProjectContent({ name, imagePath, description, technolog
 					)}
 				</div>
 			</div>
-		</div>
-		
+		</motion.div>
 	);
 }

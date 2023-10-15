@@ -1,8 +1,18 @@
 import clsx from "clsx";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import * as Form from "@radix-ui/react-form";
+import { Loader2Icon } from "lucide-react";
+
+enum EmailStatus {
+	NotSent,
+	Sending,
+	Error,
+	Sent
+}
 
 export default function ContactForm() {
+	const [emailStatus, setEmailStatus] = useState(EmailStatus.NotSent);
+
 	const nameRef = useRef<HTMLInputElement>(null!);
 	const emailRef = useRef<HTMLInputElement>(null!);
 	const messageRef = useRef<HTMLTextAreaElement>(null!);
@@ -16,29 +26,46 @@ export default function ContactForm() {
 		const apiAuthPassword = process.env.API_AUTH_PASSWORD;
 		const toEmails = process.env.TO_EMAILS;
 
-		const res = await fetch("/api/email", {
-			method: "POST",
-			headers: {
-				"Content-Type": "application/json"
-			},
-			body: JSON.stringify({ name, email, message, apiAuthUsername, apiAuthPassword, toEmails })
-		});
+		setEmailStatus(EmailStatus.Sending);
 
-		if (res.status !== 200) {
-			console.error("Failed to send email");
+		setTimeout(async () => {
+			// const res = await fetch("/api/email", {
+			// 	method: "POST",
+			// 	headers: {
+			// 		"Content-Type": "application/json"
+			// 	},
+			// 	body: JSON.stringify({ name, email, message, apiAuthUsername, apiAuthPassword, toEmails })
+			// });
 
-			nameRef.current.value = "";
-			emailRef.current.value = "";
-			messageRef.current.value = "";
-		}
-		else {
-			console.log("Email sent!");
-		}
+			// if (res.status === 200) {
+			// 	setEmailStatus(EmailStatus.Sent);
 
-		return res;
+			// 	nameRef.current.value = "";
+			// 	emailRef.current.value = "";
+			// 	messageRef.current.value = "";
+			// }
+			// else {
+			// 	setEmailStatus(EmailStatus.Error);
+			// }
+
+			// return res;
+			
+			if (true) {
+				setEmailStatus(EmailStatus.Sent);
+
+				nameRef.current.value = "";
+				emailRef.current.value = "";
+				messageRef.current.value = "";
+			}
+			else {
+				setEmailStatus(EmailStatus.Error);
+			}
+		}, 1500);
 	}
 
 	async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+		e.preventDefault();
+
 		await sendEmail();
 	}
 
@@ -53,6 +80,7 @@ export default function ContactForm() {
 
 					<Form.Control
 						ref={nameRef}
+						disabled={emailStatus === EmailStatus.Sending}
 						className={clsx(
 							"px-2.5 py-1.5 text-background-900 bg-background-50 rounded-md border-2 border-background-50",
 							"focus:border-primary-500 focus:!outline-none"
@@ -78,6 +106,7 @@ export default function ContactForm() {
 					<Form.Control
 						type="email"
 						ref={emailRef}
+						disabled={emailStatus === EmailStatus.Sending}
 						className={clsx(
 							"px-2.5 py-1.5 text-background-900 bg-background-50 rounded-md border-2 border-background-50",
 							"focus:border-primary-500 focus:!outline-none"
@@ -102,8 +131,9 @@ export default function ContactForm() {
 						<textarea
 							required
 							ref={messageRef}
+							disabled={emailStatus === EmailStatus.Sending}
 							className={clsx(
-								"px-3 py-1.5 min-h-[6em] text-background-900 bg-background-50 rounded-md border-2 border-background-50",
+								"px-3 py-1.5 min-h-[6em] text-background-900 bg-background-50 rounded-md border-2 border-background-50 resize-y",
 								"focus:border-primary-500 focus:!outline-none"
 							)}
 						/>
@@ -111,8 +141,31 @@ export default function ContactForm() {
 				</div>
 			</Form.Field>
 
-			<Form.Submit className="px-5 py-1.5 text-background-900 bg-secondary-300 text-xl text-center rounded-md resize-y">
-				Send
+			{emailStatus === EmailStatus.Sent && (
+				<p className="text-text-50">
+					Message sent successfully! Thanks for reaching out, I&apos;ll get back to you as soon as I can.
+				</p>
+			)}
+
+			{emailStatus === EmailStatus.Error && (
+				<p className="text-text-50">
+					The message failed to send. Please try again.
+				</p>
+			)}
+
+			<Form.Submit className="px-5 py-1.5 w-24 h-10 flex flex-row justify-center items-center text-background-900 bg-secondary-300 text-xl text-center rounded-md">
+				<Loader2Icon
+					className={clsx(
+						"h-[1.5rem] w-[1.5rem] stroke-background-900 animate-spin",
+						{ "hidden" : emailStatus !== EmailStatus.Sending },
+						{ "inline-block" : emailStatus !== EmailStatus.Sending }
+					)}
+				/>
+
+				<span className={clsx(
+					{ "inline" : emailStatus !== EmailStatus.Sending },
+					{ "hidden": emailStatus === EmailStatus.Sending }
+				)}>Send</span>
 			</Form.Submit>
 		</Form.Root>
 	);

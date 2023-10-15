@@ -4,10 +4,20 @@ import clsx from "clsx";
 import Image from "next/image";
 import { inter, jbMono } from "@/Fonts";
 import TypedGreeting from "./TypedGreeting";
+import { motion } from "framer-motion";
 
 export default function Hero() {
+	const variants = {
+		initial: {
+			opacity: 0
+		},
+		animate: {
+			opacity: 1
+		}
+	};
+
 	return (
-		<section className="w-full h-screen">
+		<motion.section className="w-full h-screen" variants={variants} initial="initial" animate="animate">
 			<div className="w-auto h-full flex flex-col justify-center items-center gap-6">
 				<Image
 					width={112}
@@ -26,7 +36,7 @@ export default function Hero() {
 				)}>
 					<TypedGreeting
 						targetText="Hi! I'm Gavin D'Hondt."
-						delay={200}
+						delay={400}
 						className={clsx(
 							"text-2xl",
 							"lg:text-4xl",
@@ -71,6 +81,6 @@ export default function Hero() {
 					</div>
 				</div>
 			</div>
-		</section>
+		</motion.section>
 	);
 }

@@ -3,7 +3,7 @@
 import clsx from "clsx";
 import React, { useEffect } from "react";
 
-const SCALE_FACTOR = 0.045;
+const SCALE_FACTOR = 0.0545;
 
 export default function Background() {
 	const backgroundRef = React.useRef<HTMLDivElement>(null!);
@@ -14,13 +14,19 @@ export default function Background() {
 		backgroundRef.current.style.setProperty("--scale", `${newScale}`);
 	}
 
+	function scrollListener() {
+		updateBackgroundScale();
+	}
+
 	useEffect(() => {
 		updateBackgroundScale();
 
-		document.addEventListener("scroll", () => {
-			updateBackgroundScale();
-		});
-	}, []);
+		document.addEventListener("scroll", scrollListener);
+
+		return () => {
+			document.removeEventListener("scroll", scrollListener);
+		}
+	}, [scrollListener]);
 
 	return (
 		<div

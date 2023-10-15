@@ -5,7 +5,7 @@ import EmailTemplate from "@/components/Contact/EmailTemplate";
 const RESEND_API_KEY: string = process.env.RESEND_API_KEY;
 const API_AUTH_USERNAME: string = process.env.API_AUTH_USERNAME;
 const API_AUTH_PASSWORD: string = process.env.API_AUTH_PASSWORD;
-const TO_EMAILS: string = process.env.TO_EMAILS.split(" ");
+const TO_EMAILS: string[] = process.env.TO_EMAILS.split(" ");
 
 const resend = new Resend(RESEND_API_KEY);
 
@@ -17,7 +17,7 @@ export async function POST(request: Request) {
 			await resend.emails.send({
 				from: "Contact Form Response <responses@gavindhondt.com>",
 				to: TO_EMAILS,
-				subject: "Website Contact Form Response",
+				subject: "Portfolio Contact Form Response",
 				react: EmailTemplate({ name, email, message })
 			});
 
