@@ -46,7 +46,7 @@ export default function About() {
 						inter.className
 					)}>
 						<p>
-							I have been learning programming for over 6 years, and it is by far my greatest passion.
+							I have been programming for over 6 years, and it is by far my greatest passion.
 						</p>
 
 						<p>
