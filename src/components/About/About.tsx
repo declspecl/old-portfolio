@@ -64,8 +64,10 @@ export default function About() {
 
 				{/* picture column */}
 				<img
+					width={446}
+					height={563}
 					src="/senior-pic.jpg"
-					alt="my senior picture"
+					alt="My senior picture"
 					className={clsx(
 						"col-start-2 col-span-1"
 					)}

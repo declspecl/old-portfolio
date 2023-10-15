@@ -19,8 +19,8 @@ export default function Hero() {
 		<motion.section className="w-full h-screen" variants={variants} initial="initial" animate="animate">
 			<div className="w-auto h-full flex flex-col justify-center items-center gap-6">
 				<img
-					width={112}
-					height={112}
+					width={144}
+					height={144}
 					src="/profile-picture.png"
 					alt="my profile picture"
 					className={clsx(

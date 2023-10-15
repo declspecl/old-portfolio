@@ -19,7 +19,7 @@ export default function Skills() {
 					Most of all, I love working with low level languages, and I spend most of time working in Rust or C++. I also enjoy web development, so I have gathered a wide range of skills from various different branches of computer science.
 				</p>
 
-				<ul className={clsx(
+				<div className={clsx(
 					"flex flex-col gap-12",
 					"sm:grid sm:grid-cols-2 sm:gap-y-16 sm:gap-x-24"
 				)}>
@@ -46,7 +46,7 @@ export default function Skills() {
 						skills={["Git", "IDA", "Cheat Engine", "Python", "Java"]}
 						className="col-start-2 col-span-1"
 					/>
-				</ul>
+				</div>
 			</div>
 		</section>
 	);
