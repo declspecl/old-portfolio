@@ -1,10 +1,11 @@
 import clsx from "clsx";
 import { inter, jbMono } from "@/Fonts";
+import Section from "@/components/Layout/Section";
 import SectionText from "@/components/Typography/SectionText";
 
 export default function About() {
 	return (
-		<section className="flex flex-col gap-6">
+		<Section>
 			<div className="flex flex-row justify-center">
 				<SectionText id="about">About</SectionText>
 			</div>
@@ -73,6 +74,6 @@ export default function About() {
 					)}
 				/>
 			</div>
-		</section>
+		</Section>
 	);
 }

@@ -1,13 +1,14 @@
 "use client";
 
 import Project from "./Project";
+import Section from "@/components/Layout/Section";
 import * as Accordion from "@radix-ui/react-accordion";
 import * as Separator from "@radix-ui/react-separator";
 import SectionText from "@/components/Typography/SectionText";
 
 export default function Projects() {
 	return (
-		<section className="flex flex-col gap-6">
+		<Section>
 			<div className="flex flex-row justify-center items-center">
 				<SectionText id="projects">Projects</SectionText>
 			</div>
@@ -43,6 +44,6 @@ export default function Projects() {
 					animationDelay={850}
 				/>
 			</Accordion.Root>
-		</section>
+		</Section>
 	);
 }

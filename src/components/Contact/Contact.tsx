@@ -1,15 +1,14 @@
-"use client";
-
 import clsx from "clsx";
 import { inter } from "@/Fonts";
 import ContactForm from "./ContactForm";
-import { CircleIcon, GithubIcon, LinkedinIcon, MailIcon } from "lucide-react";
+import Section from "@/components/Layout/Section";
 import SectionText from "@/components/Typography/SectionText";
+import { CircleIcon, GithubIcon, LinkedinIcon } from "lucide-react";
 
 export default function Contact() {
 	return (
-		<section className={clsx(
-			"flex flex-col items-center gap-6 text-lg",
+		<Section className={clsx(
+			"items-center text-lg",
 			inter.className
 		)}>
 			<div className="flex flex-row justify-center">
@@ -79,6 +78,6 @@ export default function Contact() {
 			</div>
 
 			<ContactForm />
-		</section>
+		</Section>
 	);
 }

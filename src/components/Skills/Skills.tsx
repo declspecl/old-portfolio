@@ -1,11 +1,12 @@
 import clsx from "clsx";
 import { inter } from "@/Fonts";
 import SkillGroup from "./SkillGroup";
+import Section from "@/components/Layout/Section";
 import SectionText from "@/components/Typography/SectionText";
 
 export default function Skills() {
 	return (
-		<section className="flex flex-col gap-6">
+		<Section>
 			<div className="flex flex-row justify-center items-center">
 				<SectionText id="skills">Skills</SectionText>
 			</div>
@@ -48,6 +49,6 @@ export default function Skills() {
 					/>
 				</div>
 			</div>
-		</section>
+		</Section>
 	);
 }
