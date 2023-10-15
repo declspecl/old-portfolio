@@ -36,11 +36,11 @@ export default function Contact() {
 				<div className="-mt-4 w-full flex flex-row flex-wrap justify-center items-center gap-4 text-text-50">
 					<div className="flex flex-row items-center gap-[6px]">
 						<img
-							width={22}
+							width={22.44}
 							height={17}
 							alt="Discord logo"
 							src="/discord-logo.png"
-							className="h-[1.25em] aspect-auto"
+							className="aspect-auto h-[1.25em] w-[1.65em]"
 						/>
 
 						<span>declspecl</span>
