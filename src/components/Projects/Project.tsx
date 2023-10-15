@@ -42,7 +42,7 @@ export default function Project({ name, imagePath, description, technologies, re
 				</h2>
 
 				<ChevronDownIcon
-					strokeWidth={1.25}
+					strokeWidth={1.5}
 					className={clsx(
 						"w-[1em] h-[1em] text-text-50 transition-[transform] animate-pulse",
 						"group-data-state-open:-rotate-180 group-data-state-open:animate-none"

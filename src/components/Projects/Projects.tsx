@@ -29,7 +29,7 @@ export default function Projects() {
 					description="I made this website for my client Haley Puri as a way for him to easily display his art and brand himself online."
 					technologies={["React", "Next.js", "TailwindCSS", "Radix UI", "framer-motion", "Resend"]}
 					siteLink="https://haleypuri.com"
-					animationDelay={400}
+					animationDelay={425}
 				/>
 
 				<Separator.Root decorative orientation="horizontal" className="w-full h-[1px] bg-text-50 opacity-50" />
@@ -40,7 +40,7 @@ export default function Projects() {
 					description="pow is a windows file explorer desktop app using Tauri and React. It is a highly customizable and performant file explorer, supporting various quality of life features like a YAML config file, fuzzy finding, environment variable resolution, sorting, and more."
 					technologies={["Rust", "Tauri", "React", "TailwindCSS", "Radix UI", "react-spring"]}
 					repoLink="https://github.com/declspecl/pow"
-					animationDelay={800}
+					animationDelay={850}
 				/>
 			</Accordion.Root>
 		</section>
