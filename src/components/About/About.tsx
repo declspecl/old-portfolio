@@ -51,14 +51,14 @@ export default function About() {
 						</p>
 
 						<p>
-							I went to an International Baccalaureate high school, graduating as a valedictorian with a 4.2 GPA.
-							During this time, I took HL IB Computer Science, receiving a 7 on my IA and a 5 on the exam.
+							I went to an International Baccalaureate high school, graduating as a valedictorian with a 4.2 GPA and IB Diploma Candidate.
+							During this time, I took a higher level computer science class, achieving the highest score in my school.
 							Currently, I attend Oakland University as a Computer Science major.
 						</p>
 
 						<p>
-							Outside of academics, I love playing video games, playing instruments, and, generally, learning.
-							I love learning about people, languages, and various other topics.
+							Outside of academics, I enjoy playing video games, playing instruments, and, generally, learning.
+							I am always learning something, whether it be a new computer science concept, a new song, or a new skill.
 						</p>
 					</div>
 				</div>

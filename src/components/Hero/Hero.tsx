@@ -34,7 +34,7 @@ export default function Hero() {
 					"xl:w-3/4"
 				)}>
 					<TypedGreeting
-						targetText="Hi! I'm Gavin D'Hondt."
+						targetText="Hi. I'm Gavin D'Hondt."
 						delay={400}
 						className={clsx(
 							"text-2xl",
