@@ -74,7 +74,7 @@ export default function ContactForm() {
 	return (
 		<Form.Root
 			onSubmit={handleSubmit}
-			className="w-full flex flex-col items-center gap-5 text-base"
+			className="w-full flex flex-col items-center gap-4 text-base"
 		>
 			<Form.Field className="w-full" name="name">
 				<div className="flex flex-col">
