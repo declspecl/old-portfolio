@@ -9,9 +9,7 @@ import SectionText from "@/components/Typography/SectionText";
 export default function Projects() {
 	return (
 		<Section>
-			<div className="flex flex-row justify-center items-center">
-				<SectionText id="projects">Projects</SectionText>
-			</div>
+			<SectionText id="projects">Projects</SectionText>
 
 			<Accordion.Root type="multiple" className="flex flex-col gap-4">
 				<Project
@@ -38,7 +36,7 @@ export default function Projects() {
 				<Project
 					name="pow (WIP)"
 					imagePath="/pow.png"
-					description="pow is a windows file explorer desktop app using Tauri and React. It is a highly customizable and performant file explorer, supporting various quality of life features like a YAML config file, fuzzy finding, environment variable resolution, sorting, and more."
+					description="pow is a windows file explorer desktop app made with Tauri and React. It is a highly customizable and performant file explorer, supporting various quality of life features like a YAML config file, fuzzy finding, environment variable resolution, sorting, and more."
 					technologies={["Rust", "Tauri", "React", "TailwindCSS", "Radix UI", "react-spring"]}
 					repoLink="https://github.com/declspecl/pow"
 					animationDelay={850}

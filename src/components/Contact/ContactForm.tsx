@@ -84,7 +84,7 @@ export default function ContactForm() {
 						ref={nameRef}
 						disabled={emailStatus === EmailStatus.Sending}
 						className={clsx(
-							"px-2.5 py-1 text-background-950 bg-background-50 rounded-md border-2 border-background-50",
+							"px-2 py-1 text-background-950 bg-background-50 rounded-md border-2 border-background-50",
 							"focus:border-primary-500 focus:!outline-none"
 						)}
 					/>
@@ -155,7 +155,7 @@ export default function ContactForm() {
 				</p>
 			)}
 
-			<Form.Submit className="px-2 py-1 w-24 h-10 flex flex-row justify-center items-center text-background-950 bg-secondary-300 text-xl text-center rounded-md">
+			<Form.Submit className="px-2 py-1 w-24 h-10 flex flex-row justify-center items-center text-background-950 font-medium bg-secondary-300 text-xl text-center rounded-md">
 				<Loader2Icon
 					className={clsx(
 						"h-[1.5rem] w-[1.5rem] stroke-background-900 animate-spin",

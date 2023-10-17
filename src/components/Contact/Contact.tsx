@@ -11,47 +11,23 @@ export default function Contact() {
 			"items-center text-lg",
 			inter.className
 		)}>
-			<div className="flex flex-row justify-center">
-				<SectionText id="contact">Contact Me</SectionText>
-			</div>
+			<SectionText id="contact">Contact Me</SectionText>
 
-			<div className="flex flex-col gap-6">
-				<div className="flex flex-col gap-[6px]">
-					<p className={clsx(
-						"text-lg text-text-50 text-center",
-						"xl:inline-block xl:w-3/4 xl:mx-auto"
-					)}>
-						Thanks for reaching out to me! Feel free to use this form to send me a message. Alternatively, <a href="mailto:gavind2559@gmail.com" className="underline">send me an email</a>.
+			<div className="flex flex-col gap-2">
+				<div className={clsx(
+                    "flex flex-col gap-0.5 text-lg text-text-50 text-center",
+                    "xl:w-10/12 xl:mx-auto"
+                )}>
+					<p>
+						Thanks for reaching out! Feel free to use this form to message me. Alternatively, <a href="mailto:gavind2559@gmail.com" className="underline">send me an email</a>.
 					</p>
 
-					<p className={clsx(
-						"text-lg text-text-50 text-center",
-						"xl:inline-block xl:w-3/4 xl:mx-auto"
-					)}>
+					<p>
 						Also, check me out on the following platforms:
 					</p>
 				</div>
 
-				<div className="-mt-4 w-full flex flex-row flex-wrap justify-center items-center gap-4 text-text-50">
-					<div className="flex flex-row items-center gap-[6px]">
-						<img
-							width={22.44}
-							height={17}
-							alt="Discord logo"
-							src="/discord-logo.png"
-							className="aspect-auto h-[1.25em] w-[1.65em]"
-						/>
-
-						<span>declspecl</span>
-					</div>
-
-					<CircleIcon
-						className={clsx(
-							"h-[0.35em] w-[0.35em] stroke-text-50 fill-text-50 hidden",
-							"md:inline-block"
-						)}
-					/>
-
+				<div className="w-full flex flex-row justify-center items-center gap-4 flex-wrap text-text-50">
 					<div className="flex flex-row items-center gap-[6px]">
 						<GithubIcon
 							className="h-[1.25em] w-[1.25em] bg-text-900 stroke-text-50 rounded-sm"

@@ -4,7 +4,7 @@ import { inter } from "@/Fonts";
 export default function Navi() {
 	return (
 		<div className={clsx(
-			"hidden fixed top-0 z-30 w-full bg-background-900 bg-opacity-50 transition-[background-color]",
+			"hidden fixed top-0 z-30 w-full bg-background-900 bg-opacity-60 transition-[background-color]",
 			"md:block",
 			"hover:bg-opacity-90"
 		)}>

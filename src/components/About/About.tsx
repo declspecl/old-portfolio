@@ -6,42 +6,24 @@ import SectionText from "@/components/Typography/SectionText";
 export default function About() {
 	return (
 		<Section>
-			<div className="flex flex-row justify-center">
-				<SectionText id="about">About</SectionText>
-			</div>
+			<SectionText id="about">About</SectionText>
 
 			<div className={clsx(
-				"gap-4",
-				"flex flex-col-reverse",
+				"flex flex-col-reverse gap-4",
 				"md:grid md:grid-cols-2",
 			)}>
-				{/* information column */}
 				<div className={clsx(
-					"col-start-1 col-span-1 w-full flex flex-col gap-4"
+					"w-full flex flex-col gap-5"
 				)}>
-					<div className={clsx(
-						"flex flex-col gap-2 text-text-50",
-						jbMono.className
-					)}>
-						<h2 className={clsx(
-							"text-primary-200 text-2xl",
-							"md:text-3xl",
-							"lg:text-4xl"
-						)}>
-							Hello!
-						</h2>
-
-						<h3 className={clsx(
-							"text-xl",
-							"lg:text-2xl"
-						)}>
-							I&apos;m Gavin. I&apos;m a student and software engineer.
-						</h3>
-					</div>
+                   <h3 className={clsx(
+                       "text-3xl text-text-50",
+                       jbMono.className
+                   )}>
+                       I&apos;m <span className="text-primary-200">Gavin</span>, a student and software engineer.
+                   </h3>
 
 					<div className={clsx(
 						"flex flex-col gap-3 text-text-50",
-						"text-base",
 						"lg:text-lg",
 						"xl:text-xl",
 						inter.className
@@ -51,7 +33,7 @@ export default function About() {
 						</p>
 
 						<p>
-							I went to an International Baccalaureate high school, graduating as a valedictorian with a 4.2 GPA and IB Diploma Candidate.
+							I went to an International Baccalaureate high school, graduating with a 4.2 GPA as a valedictorian and IB Diploma Candidate.
 							During this time, I took a higher level computer science class, achieving the highest score in my school.
 							Currently, I attend Oakland University as a Computer Science major.
 						</p>
@@ -63,7 +45,6 @@ export default function About() {
 					</div>
 				</div>
 
-				{/* picture column */}
 				<img
 					width={446}
 					height={563}

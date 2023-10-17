@@ -23,12 +23,12 @@ export default function SkillGroup({ title, skills, className }: SkillGroupProps
                 transform: isInView ? "translateY(0)" : "translateY(75px)"
             }}
             className={clsx(
-                "flex flex-col items-center gap-3 opacity-0 translate-y-[75px] transition-all duration-300",
+                "flex flex-col items-center gap-4 opacity-0 translate-y-[75px] transition-all duration-300",
                 className
             )}
         >
 			<h2 className={clsx(
-				"inline-block bg-gradient-to-r from-primary-200 to-accent-500 text-text-50 text-opacity-0 bg-clip-text",
+				"inline-block bg-gradient-to-r from-primary-200 to-accent-400 text-text-50 font-semibold text-opacity-0 bg-clip-text",
 				"text-3xl text-center",
 				jbMono.className
 			)}>

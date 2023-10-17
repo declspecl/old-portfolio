@@ -21,7 +21,7 @@ export default function Section({ className, children }: SectionProps) {
                 transform: isInView ? "translateY(0)" : "translateY(100px)"
             }}
             className={clsx(
-                "flex flex-col gap-6 opacity-0 translate-y-[100px] transition-all duration-300",
+                "flex flex-col opacity-0 translate-y-[100px] transition-all duration-300",
                 className
             )}
         >

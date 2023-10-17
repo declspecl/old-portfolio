@@ -3,7 +3,7 @@
 import clsx from "clsx";
 import React, { useState, useEffect } from "react";
 
-const SCALE_FACTOR = 0.0545;
+const SCALE_FACTOR = 0.09;
 
 export default function Background() {
     const [scale, setScale] = useState(1.0);
