@@ -56,16 +56,13 @@ export default function ProjectContent({ name, imagePath, description, technolog
 
 			<div className={clsx("flex flex-col gap-4")}>
 				<div className="flex flex-col text-text-50">
-					<p className={clsx(
-						"text-base",
-						"sm:text-lg"
-					)}>
+					<p className="text-lg">
 						{description}
 					</p>
 				</div>
 
 				<div className={clsx("flex flex-col gap-2 text-text-50")}>
-					<p className="text-base">Technologies used:</p>
+					<p className="text-lg">Technologies used:</p>
 
 					<div className="flex flex-row flex-wrap gap-2.5">
 						{technologies.map((technology, index) => (
@@ -87,7 +84,7 @@ export default function ProjectContent({ name, imagePath, description, technolog
 							href={repoLink}
 							target="_blank"
 							className={clsx(
-								"flex flex-row items-center text-base text-text-50 underline",
+								"flex flex-row items-center text-lg text-text-50 underline",
 							)}
 						>
 							<span>View Repository</span>

@@ -9,11 +9,12 @@ export default function About() {
 			<SectionText id="about">About</SectionText>
 
 			<div className={clsx(
-				"flex flex-col-reverse gap-4",
-				"md:grid md:grid-cols-2",
+                "flex flex-col-reverse gap-4",
+                "md:flex-row md:items-stretch"
 			)}>
 				<div className={clsx(
-					"w-full flex flex-col gap-5"
+					"flex flex-col gap-5",
+                    "md:flex-1"
 				)}>
                    <h3 className={clsx(
                        "text-3xl text-text-50",
@@ -24,7 +25,7 @@ export default function About() {
 
 					<div className={clsx(
 						"flex flex-col gap-3 text-text-50",
-						"lg:text-lg",
+						"text-lg",
 						"xl:text-xl",
 						inter.className
 					)}>
@@ -45,15 +46,15 @@ export default function About() {
 					</div>
 				</div>
 
-				<img
-					width={446}
-					height={563}
-					src="/senior-pic.jpg"
-					alt="My senior picture"
-					className={clsx(
-						"col-start-2 col-span-1"
-					)}
-				/>
+                <div className="flex-1">
+				    <img
+				    	src="/senior-pic.webp"
+				    	alt="My senior picture"
+				    	className={clsx(
+                            "w-full h-auto object-cover"
+				    	)}
+				    />
+                </div>
 			</div>
 		</Section>
 	);

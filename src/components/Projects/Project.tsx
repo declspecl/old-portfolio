@@ -26,7 +26,7 @@ export default function Project({ name, imagePath, description, technologies, re
 			<Accordion.Trigger
 				onClick={() => setIsExpanded(!isExpanded)}
 				className={clsx(
-					"w-full flex flex-row justify-between items-center text-2xl",
+					"w-full flex flex-row justify-between items-center text-3xl",
 					"sm:text-4xl"
 				)}
 			>

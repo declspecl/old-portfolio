@@ -21,7 +21,7 @@ export default function Hero() {
 				<img
 					width={144}
 					height={144}
-					src="/profile-picture.png"
+					src="/profile-picture.webp"
 					alt="my profile picture"
 					className={clsx(
 						"w-28 aspect-square rounded-full bg-text-100 drop-shadow-hero transform-gpu",
