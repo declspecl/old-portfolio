@@ -28,13 +28,17 @@ export default function Contact() {
 				</div>
 
 				<div className="w-full flex flex-row justify-center items-center gap-4 flex-wrap text-text-50">
-					<div className="flex flex-row items-center gap-[6px]">
+					<a
+                        href="https://github.com/declspecl"
+                        target="_blank"
+                        className="flex flex-row items-center gap-[6px] group"
+                    >
 						<GithubIcon
-							className="h-[1.25em] w-[1.25em] bg-text-900 stroke-text-50 rounded-sm"
+							className="h-[1.25em] w-[1.25em] bg-text-800 stroke-text-50 rounded-md"
 						/>
 
-						<a href="https://github.com/declspecl" target="_blank">declspecl</a>
-					</div>
+						<span className="group-hover:underline">declspecl</span>
+					</a>
 
 					<CircleIcon
 						className={clsx(
@@ -43,13 +47,17 @@ export default function Contact() {
 						)}
 					/>
 
-					<div className="flex flex-row items-center gap-[6px]">
+					<a
+                        href="https://www.linkedin.com/in/gavindhondt/"
+                        target="_blank"
+                        className="flex flex-row items-center gap-[6px] group"
+                    >
 						<LinkedinIcon
 							className="h-[1.25em] w-[1.25em] bg-primary-600 rounded-sm p-0.5 stroke-1 stroke-text-50 fill-text-50"
 						/>
 
-						<a href="https://www.linkedin.com/in/gavindhondt/" target="_blank">gavindhondt</a>
-					</div>
+						<span className="group-hover:underline">gavindhondt</span>
+					</a>
 				</div>
 			</div>
 

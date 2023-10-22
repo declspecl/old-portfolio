@@ -9,10 +9,11 @@ export type EmailProps = {
 export default function EmailTemplate({ name, email, message }: EmailProps) {
 	const containerStyle: React.CSSProperties = {
 		width: "auto",
-		padding: "4rem",
+		paddingTop: "4rem",
+		paddingBottom: "4rem",
 		display: "flex",
 		justifyContent: "center",
-		backgroundColor: "rgb(39, 40, 92)"
+		backgroundColor: "rgb(61, 49, 98)"
 	};
 
 	const innerContainerStyle: React.CSSProperties = {
@@ -41,7 +42,10 @@ export default function EmailTemplate({ name, email, message }: EmailProps) {
 
 	const dataContentStyle: React.CSSProperties = {
 		boxSizing: "border-box",
-		padding: "0.5rem",
+		paddingLeft: "0.5rem",
+		paddingRight: "0.5rem",
+        paddingTop: "0.25rem",
+        paddingBottom: "0.25rem",
 		width: "100%",
 		border: "1px solid rgb(209, 213, 219)",
 		borderRadius: "0.5rem",

@@ -93,10 +93,20 @@ const config: Config = {
 					"50%": { opacity: "0" },
 					"99.99%": { opacity: "0" },
 					"100%": { opacity: "1" }
-				}
+				},
+                elongate: {
+                    "0%": { height: "0%" },
+                    "100%": { height: "100%" },
+                },
+                shrink: {
+                    "0%": { height: "100%" },
+                    "100%": { height: "0%" },
+                }
 			},
 			animation: {
-				blink: "blink 1.35s infinite"
+				blink: "blink 1.35s infinite",
+                elongate: "elongate 0.250ms forwards",
+                shrink: "shrink 0.250ms forwards"
 			},
 			dropShadow: {
 				"hero": "0 100px 200px rgba(255, 255, 255, 0.45)"
