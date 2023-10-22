@@ -80,9 +80,6 @@ const config: Config = {
 			backgroundImage: {
 				"starfield": "url(\"/starfield.svg\")"
 			},
-			screens: {
-				"xs": "320px"
-			},
 			data: {
 				"state-open": "state~=open"
 			},

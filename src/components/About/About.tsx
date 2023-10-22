@@ -15,7 +15,8 @@ export default function About() {
                 <div className={clsx(
                     "flex flex-col gap-5",
                     "md:flex-1",
-                    "xl:py-2 "
+                    "lg:py-6",
+                    "xl:py-12"
                 )}>
                     <div className={clsx(
                         "flex flex-col gap-3",
@@ -33,8 +34,8 @@ export default function About() {
                     </div>
 
                     <div className={clsx(
-                        "flex flex-col gap-3 text-text-50",
-                        "text-lg",
+                        "flex flex-col gap-3 text-text-50 text-base",
+                        "lg:text-lg",
                         "xl:text-xl",
                         inter.className
                     )}>
@@ -43,7 +44,7 @@ export default function About() {
                         </p>
 
                         <p>
-                            I went to an International Baccalaureate high school, graduating with a 4.2 GPA as a valedictorian and IB Diploma Candidate.
+                            I went to an International Baccalaureate high school, graduating with a 4.2 GPA as a valedictorian and receiving my IB Diploma.
                             During this time, I took a higher level computer science class, achieving the highest score in my school.
                             Currently, I attend Oakland University as a Computer Science major.
                         </p>

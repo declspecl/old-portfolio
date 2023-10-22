@@ -1,10 +1,11 @@
 import clsx from "clsx";
+import React from "react";
 import { inter } from "@/Fonts";
 import { ArrowUpRightIcon } from "lucide-react";
-import { motion, Variants } from "framer-motion";
 
 interface ProjectContentProps {
 	name: string,
+    scope: React.RefObject<HTMLDivElement>,
 	imagePath: string,
 	description: string,
 	technologies: string[],
@@ -12,34 +13,13 @@ interface ProjectContentProps {
 	siteLink?: string
 }
 
-export default function ProjectContent({ name, imagePath, description, technologies, repoLink, siteLink }: ProjectContentProps) {
-	const variants: Variants = {
-		initial: {
-			height: 0,
-			marginTop: 0,
-			opacity: 0
-		},
-		animate: {
-			height: "auto",
-			marginTop: "12px",
-			opacity: 1
-		},
-		exit: {
-			height: 0,
-			marginTop: 0,
-			opacity: 0
-		}
-	};
-
+export default function ProjectContent({ name, scope, imagePath, description, technologies, repoLink, siteLink }: ProjectContentProps) {
 	return (
-		<motion.div
-			variants={variants}
-			initial="initial"
-			animate="animate"
-			exit="exit"
+		<div
+            ref={scope}
 			className={clsx(
-				"flex flex-col gap-4 overflow-hidden",
-				"lg:grid lg:grid-cols-2",
+				"mt-0 flex flex-col gap-4 h-0 opacity-0 overflow-hidden",
+                "lg:grid lg:grid-cols-2",
 				inter.className
 			)}
 		>
@@ -106,6 +86,6 @@ export default function ProjectContent({ name, imagePath, description, technolog
 					)}
 				</div>
 			</div>
-		</motion.div>
+		</div>
 	);
 }
