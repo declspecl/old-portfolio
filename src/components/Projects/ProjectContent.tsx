@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import React from "react";
 import { inter } from "@/Fonts";
-import { ArrowUpRightIcon } from "lucide-react";
+import { ExternalLinkIcon } from "lucide-react";
 
 interface ProjectContentProps {
 	name: string,
@@ -64,11 +64,11 @@ export default function ProjectContent({ name, scope, imagePath, description, te
 							href={repoLink}
 							target="_blank"
 							className={clsx(
-								"flex flex-row items-center text-lg text-text-50 underline",
+								"flex flex-row items-center gap-1 text-lg text-text-50 underline",
 							)}
 						>
 							<span>View Repository</span>
-							<ArrowUpRightIcon className="w-[1em] h-[1em]" />
+							<ExternalLinkIcon className="w-4 h-4"/>
 						</a>
 					)}
 
@@ -77,11 +77,11 @@ export default function ProjectContent({ name, scope, imagePath, description, te
 							href={siteLink}
 							target="_blank"
 							className={clsx(
-								"flex flex-row items-center text-text-50 underline"
+								"flex flex-row items-center gap-1 text-text-50 underline"
 							)}
 						>
 							<span>View Website</span>
-							<ArrowUpRightIcon className="w-[1em] h-[1em]" />
+							<ExternalLinkIcon className="w-4 h-4" />
 						</a>
 					)}
 				</div>

@@ -122,7 +122,7 @@ export default function ContactForm() {
                             ref={messageRef}
                             disabled={emailStatus === EmailStatus.Sending}
                             className={clsx(
-                                "px-2 py-1 min-h-[7rem] text-background-950 bg-background-50 rounded-md border-2 border-background-50 text-base resize-y",
+                                "px-2 py-1 min-h-[5rem] text-background-950 bg-background-50 rounded-md border-2 border-background-50 text-base resize-y",
                                 "focus:border-primary-500 focus:!outline-none"
                             )}
                         />
