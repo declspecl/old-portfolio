@@ -58,8 +58,8 @@ export default function About() {
                     <Image
                         src="/senior-pic.webp"
                         alt="My senior picture"
-                        width={2292}
-                        height={2893}
+                        width={917}
+                        height={1157}
                         loading="eager"
                         className={clsx(
                             "md:absolute md:w-full md:h-full md:object-cover md:object-top"
