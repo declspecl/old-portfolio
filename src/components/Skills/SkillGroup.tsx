@@ -6,17 +6,17 @@ import { inter, jbMono } from "@/Fonts";
 import { useInView } from "framer-motion";
 
 interface SkillGroupProps {
-	title: string,
-	skills: string[],
-	className?: string
+    title: string,
+    skills: string[],
+    className?: string
 }
 
 export default function SkillGroup({ title, skills, className }: SkillGroupProps) {
     const ref = useRef<HTMLDivElement>(null!);
     const isInView = useInView(ref, { once: true });
 
-	return (
-		<div
+    return (
+        <div
             ref={ref}
             style={{
                 opacity: isInView ? 1 : 0,
@@ -27,29 +27,29 @@ export default function SkillGroup({ title, skills, className }: SkillGroupProps
                 className
             )}
         >
-			<h2 className={clsx(
-				"inline-block bg-gradient-to-r from-primary-200 to-accent-400 text-text-50 font-semibold text-opacity-0 bg-clip-text",
+            <h2 className={clsx(
+                "inline-block bg-gradient-to-r from-primary-200 to-accent-400 text-text-50 font-semibold text-opacity-0 bg-clip-text",
                 "text-2xl text-center",
                 "lg:text-3xl",
-				jbMono.className
-			)}>
-				{title}
-			</h2>
-			
-			<ul className="flex flex-col items-center gap-2">
-				{skills.map(skill => (
-					<li
-						key={skill.toLowerCase()}
-						className={clsx(
-							"text-base text-text-50",
+                jbMono.className
+            )}>
+                {title}
+            </h2>
+            
+            <ul className="flex flex-col items-center gap-2">
+                {skills.map(skill => (
+                    <li
+                        key={skill.toLowerCase()}
+                        className={clsx(
+                            "text-base text-text-50",
                             "lg:text-lg",
-							inter.className
-						)}
-					>
-						{skill}
-					</li>
-				))}
-			</ul>
-		</div>
-	);
+                            inter.className
+                        )}
+                    >
+                        {skill}
+                    </li>
+                ))}
+            </ul>
+        </div>
+    );
 }

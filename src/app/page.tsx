@@ -8,21 +8,21 @@ import Background from "@/components/Background/Background";
 import Centered from "@/components/Layout/Centered";
 
 export default function Home() {
-	return (
-		<div>
-			<Background />
+    return (
+        <div>
+            <Background />
 
-			<Navi />
+            <Navi />
 
-			<Centered>
-				<Hero />
-				<div className="flex flex-col gap-20 mb-12">
-					<About />
-					<Projects />
-					<Skills />
-					<Contact />
-				</div>
-			</Centered>
-		</div>
-	);
+            <Centered>
+                <Hero />
+                <div className="flex flex-col gap-20 mb-12">
+                    <About />
+                    <Projects />
+                    <Skills />
+                    <Contact />
+                </div>
+            </Centered>
+        </div>
+    );
 }
