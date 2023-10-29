@@ -22,8 +22,8 @@ export default function Hero() {
                 <Image
                     src="/profile-picture.webp"
                     alt="my profile picture"
-                    width={873}
-                    height={873}
+                    width={218}
+                    height={218}
                     loading="eager"
                     className={clsx(
                         "w-28 aspect-square rounded-full bg-text-100 drop-shadow-hero transform-gpu",
