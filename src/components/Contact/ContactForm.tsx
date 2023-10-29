@@ -61,13 +61,15 @@ export default function ContactForm() {
     return (
         <Form.Root
             onSubmit={handleSubmit}
-            className="w-full flex flex-col items-center gap-4 text-base"
+            className="w-full flex flex-col items-center gap-4 text-base lg:text-lg"
         >
             <Form.Field className="w-full" name="name">
                 <div className="flex flex-col">
                     <Form.Label className="text-text-50">Name</Form.Label>
 
                     <Form.Control
+                        type="text"
+                        autoComplete="name"
                         ref={nameRef}
                         disabled={emailStatus === EmailStatus.Sending}
                         className={clsx(
@@ -78,7 +80,7 @@ export default function ContactForm() {
                 </div>
             </Form.Field>
 
-            <Form.Field name="email" className="w-full">
+            <Form.Field name="email" className="w-full" >
                 <div className="flex flex-col">
                     <div className="flex flex-row justify-between text-text-50">
                         <Form.Label>Email *</Form.Label>
@@ -94,6 +96,7 @@ export default function ContactForm() {
 
                     <Form.Control
                         type="email"
+                        autoComplete="email"
                         ref={emailRef}
                         disabled={emailStatus === EmailStatus.Sending}
                         className={clsx(
@@ -142,7 +145,10 @@ export default function ContactForm() {
                 </p>
             )}
 
-            <Form.Submit className="px-2 py-1 w-24 h-10 flex flex-row justify-center items-center text-background-950 font-medium bg-secondary-300 text-xl text-center rounded-md">
+            <Form.Submit className={clsx(
+                "px-2 py-1 w-24 h-10 flex flex-row justify-center items-center text-background-950 font-medium bg-secondary-300 text-xl text-center rounded-md transition-[background-color]",
+                "hover:bg-secondary-200"
+            )}>
                 <Loader2Icon
                     className={clsx(
                         "h-[1.5rem] w-[1.5rem] stroke-background-900 animate-spin",

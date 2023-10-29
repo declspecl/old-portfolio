@@ -9,6 +9,7 @@ import * as Accordion from "@radix-ui/react-accordion";
 interface ProjectProps {
     name: string,
     imagePath: string,
+    imageDimensions: { width: number, height: number },
     description: string,
     technologies: string[],
     repoLink?: string,
@@ -16,28 +17,24 @@ interface ProjectProps {
     animationDelay?: number
 }
 
-export default function Project({ name, imagePath, description, technologies, repoLink, siteLink, animationDelay = 0 }: ProjectProps) {
+export default function Project({ name, imagePath, imageDimensions, description, technologies, repoLink, siteLink, animationDelay = 0 }: ProjectProps) {
     const [isExpanded, setIsExpanded] = React.useState(false);
     const [scope, animate] = useAnimate();
 
-    const nameValue = name.toLowerCase().replace(" ", "-");
-
     return (
-        <Accordion.Item value={nameValue} className="w-full group">
+        <Accordion.Item value={name.toLowerCase().replace(" ", "-")} className="w-full group">
             <Accordion.Trigger
                 onClick={() => {
-                    if (isExpanded) {
+                    if (isExpanded)
                         animate(scope.current, { opacity: 0, height: 0, marginTop: 0 });
-                    }
-                    else {
+                    else
                         animate(scope.current, { opacity: 1, height: "auto", marginTop: "12px" });
-                    }
 
                     setIsExpanded(!isExpanded);
                 }}
                 className={clsx(
                     "w-full flex flex-row justify-between items-center text-3xl",
-                    "sm:text-4xl"
+                    "md:text-4xl"
                 )}
             >
                 <h2
@@ -66,6 +63,7 @@ export default function Project({ name, imagePath, description, technologies, re
                     scope={scope}
                     name={name}
                     imagePath={imagePath}
+                    imageDimensions={imageDimensions}
                     description={description}
                     technologies={technologies}
                     repoLink={repoLink}

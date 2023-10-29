@@ -2,6 +2,7 @@ import clsx from "clsx";
 import { inter, jbMono } from "@/Fonts";
 import Section from "@/components/Layout/Section";
 import SectionText from "@/components/Typography/SectionText";
+import Image from "next/image";
 
 export default function About() {
     return (
@@ -13,10 +14,8 @@ export default function About() {
                 "md:flex-row md:justify-center"
             )}>
                 <div className={clsx(
-                    "flex flex-col gap-5",
-                    "md:flex-1",
-                    "lg:py-6",
-                    "xl:py-12"
+                    "my-auto flex flex-col gap-5",
+                    "md:flex-1"
                 )}>
                     <div className={clsx(
                         "flex flex-col gap-3",
@@ -34,9 +33,8 @@ export default function About() {
                     </div>
 
                     <div className={clsx(
-                        "flex flex-col gap-3 text-text-50 text-base",
+                        "grow flex flex-col gap-3 text-text-50 text-base",
                         "lg:text-lg",
-                        "xl:text-xl",
                         inter.className
                     )}>
                         <p>
@@ -45,8 +43,8 @@ export default function About() {
 
                         <p>
                             I went to an International Baccalaureate high school, graduating with a 4.2 GPA as a valedictorian and receiving my IB Diploma.
-                            During this time, I took a higher level computer science class, achieving the highest score in my school.
-                            Currently, I attend Oakland University as a Computer Science major.
+                            During this time, I took a higher level computer science class for 2 years, achieving the highest score in my school.
+                            Currently, I attend Oakland University, majoring in Computer Science.
                         </p>
 
                         <p>
@@ -56,10 +54,13 @@ export default function About() {
                     </div>
                 </div>
 
-                <div className="md:relative md:flex-1">
-                    <img
+                <div className="md:relative md:flex-1 md:min-h-[575px]">
+                    <Image
                         src="/senior-pic.webp"
                         alt="My senior picture"
+                        width={2292}
+                        height={2893}
+                        loading="eager"
                         className={clsx(
                             "md:absolute md:w-full md:h-full md:object-cover md:object-top"
                         )}
