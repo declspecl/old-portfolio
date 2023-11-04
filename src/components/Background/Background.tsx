@@ -28,7 +28,7 @@ export default function Background() {
         <div
             style={{ "--scale": scale } as React.CSSProperties}
             className={clsx(
-                "fixed left-0 bottom-0 w-full h-full scale-[var(--scale)] z-10 bg-background-900",
+                "fixed left-0 bottom-0 w-full h-full scale-[var(--scale)] z-10 bg-background",
                 "bg-starfield bg-contain bg-repeat"
             )}
         />

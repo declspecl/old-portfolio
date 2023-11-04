@@ -21,7 +21,7 @@ export default function Projects() {
                     repoLink="https://github.com/declspecl/ValoGuessr"
                 />
 
-                <Separator.Root decorative orientation="horizontal" className="w-full h-[1px] bg-text-50 opacity-50" />
+                <Separator.Root decorative orientation="horizontal" className="w-full h-[1px] bg-text opacity-50" />
 
                 <Project
                     name="Haley Puri Portfolio"
@@ -33,7 +33,7 @@ export default function Projects() {
                     animationDelay={425}
                 />
 
-                <Separator.Root decorative orientation="horizontal" className="w-full h-[1px] bg-text-50 opacity-50" />
+                <Separator.Root decorative orientation="horizontal" className="w-full h-[1px] bg-text opacity-50" />
 
                 <Project
                     name="pow (WIP)"

@@ -28,7 +28,7 @@ export default function SkillGroup({ title, skills, className }: SkillGroupProps
             )}
         >
             <h2 className={clsx(
-                "inline-block bg-gradient-to-r from-primary-200 to-accent-400 text-text-50 font-semibold text-opacity-0 bg-clip-text",
+                "inline-block bg-gradient-to-r from-primary-200 to-accent-500 text-text font-semibold text-opacity-0 bg-clip-text",
                 "text-2xl text-center",
                 "lg:text-3xl",
                 jbMono.className
@@ -41,7 +41,7 @@ export default function SkillGroup({ title, skills, className }: SkillGroupProps
                     <li
                         key={skill.toLowerCase()}
                         className={clsx(
-                            "text-base text-text-50",
+                            "text-base text-text",
                             "lg:text-lg",
                             inter.className
                         )}

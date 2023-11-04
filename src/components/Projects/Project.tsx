@@ -41,7 +41,7 @@ export default function Project({ name, imagePath, imageDimensions, description,
                     className={clsx(
                         "text-background-700 transition-[color] text-left",
                         "group-hover:text-background-600",
-                        "group-data-state-open:text-text-50",
+                        "group-data-state-open:text-text",
                         jbMono.className
                     )}
                 >
@@ -51,7 +51,7 @@ export default function Project({ name, imagePath, imageDimensions, description,
                 <ChevronDownIcon
                     strokeWidth={1.5}
                     className={clsx(
-                        "w-[1em] h-[1em] text-text-50 transition-[transform] animate-pulse",
+                        "w-[1em] h-[1em] text-text transition-[transform] animate-pulse",
                         "group-data-state-open:-rotate-180 group-data-state-open:animate-none"
                     )}
                     style={{ animationDelay: animationDelay.toString() + "ms", animationDuration: "2.5s" }}

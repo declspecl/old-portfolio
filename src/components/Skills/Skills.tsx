@@ -11,7 +11,7 @@ export default function Skills() {
 
             <div className="flex flex-col gap-6">
                 <p className={clsx(
-                    "text-base text-text-50 text-center",
+                    "text-base text-text text-center",
                     "lg:text-lg",
                     "xl:w-10/12 xl:mx-auto",
                     inter.className

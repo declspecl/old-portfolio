@@ -4,12 +4,12 @@ import { inter } from "@/Fonts";
 export default function Navi() {
     return (
         <div className={clsx(
-            "hidden fixed top-0 z-30 w-full bg-background-900 bg-opacity-60 transition-[background-color]",
+            "hidden fixed top-0 z-30 w-full bg-background bg-opacity-60 transition-[background-color]",
             "md:block",
             "hover:bg-opacity-90"
         )}>
             <div className={clsx(
-                "mx-auto my-5 w-[90%] flex flex-row justify-center items-center text-text-50 text-base",
+                "mx-auto my-5 w-[90%] flex flex-row justify-center items-center text-text text-base",
                 "md:justify-between",
                 "xl:mx-32 xl:w-auto",
                 inter.className

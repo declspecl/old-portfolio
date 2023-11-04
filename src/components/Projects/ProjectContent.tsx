@@ -37,7 +37,7 @@ export default function ProjectContent({ name, scope, imagePath, imageDimensions
                 )}
             />
 
-            <div className={clsx("flex flex-col gap-4 text-base text-text-50", "lg:text-lg")}>
+            <div className={clsx("flex flex-col gap-4 text-base text-text", "lg:text-lg")}>
                 <div className="flex flex-col">
                     <p>
                         {description}
@@ -52,7 +52,7 @@ export default function ProjectContent({ name, scope, imagePath, imageDimensions
                             <div
                                 key={`technology-${index + 1}`}
                                 className={clsx(
-                                    "px-2.5 py-1 rounded-full text-sm text-background-950 bg-secondary-300"
+                                    "px-2.5 py-1 rounded-full text-sm text-background-950 bg-secondary"
                                 )}
                             >
                                 {technology}
@@ -67,7 +67,7 @@ export default function ProjectContent({ name, scope, imagePath, imageDimensions
                             href={repoLink}
                             target="_blank"
                             className={clsx(
-                                "flex flex-row items-center gap-1 text-text-50 underline",
+                                "flex flex-row items-center gap-1 text-text underline",
                             )}
                         >
                             <span>View Repository</span>
@@ -80,7 +80,7 @@ export default function ProjectContent({ name, scope, imagePath, imageDimensions
                             href={siteLink}
                             target="_blank"
                             className={clsx(
-                                "flex flex-row items-center gap-1 text-text-50 underline"
+                                "flex flex-row items-center gap-1 text-text underline"
                             )}
                         >
                             <span>View Website</span>

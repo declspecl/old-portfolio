@@ -65,7 +65,7 @@ export default function ContactForm() {
         >
             <Form.Field className="w-full" name="name">
                 <div className="flex flex-col">
-                    <Form.Label className="text-text-50">Name</Form.Label>
+                    <Form.Label className="text-text">Name</Form.Label>
 
                     <Form.Control
                         type="text"
@@ -74,7 +74,7 @@ export default function ContactForm() {
                         disabled={emailStatus === EmailStatus.Sending}
                         className={clsx(
                             "px-2 py-1 text-background-950 bg-background-50 rounded-md border-2 border-background-50",
-                            "focus:border-primary-500 focus:!outline-none"
+                            "focus:border-primary focus:!outline-none"
                         )}
                     />
                 </div>
@@ -82,14 +82,14 @@ export default function ContactForm() {
 
             <Form.Field name="email" className="w-full" >
                 <div className="flex flex-col">
-                    <div className="flex flex-row justify-between text-text-50">
+                    <div className="flex flex-row justify-between text-text">
                         <Form.Label>Email *</Form.Label>
 
-                        <Form.Message match="valueMissing" className="text-secondary-300">
+                        <Form.Message match="valueMissing" className="text-secondary">
                             Please enter an email
                         </Form.Message>
 
-                        <Form.Message match="typeMismatch" className="text-secondary-300">
+                        <Form.Message match="typeMismatch" className="text-secondary">
                             Please enter a valid email
                         </Form.Message>
                     </div>
@@ -101,7 +101,7 @@ export default function ContactForm() {
                         disabled={emailStatus === EmailStatus.Sending}
                         className={clsx(
                             "px-2 py-1 text-background-950 bg-background-50 rounded-md border-2 border-background-50",
-                            "focus:border-primary-500 focus:!outline-none"
+                            "focus:border-primary focus:!outline-none"
                         )}
                         required
                     />
@@ -112,9 +112,9 @@ export default function ContactForm() {
             <Form.Field className="w-full" name="message">
                 <div className="flex flex-col">
                     <div className="flex flex-row justify-between">
-                        <Form.Label className="text-text-50">Message *</Form.Label>
+                        <Form.Label className="text-text">Message *</Form.Label>
 
-                        <Form.Message match="valueMissing" className="text-secondary-300">
+                        <Form.Message match="valueMissing" className="text-secondary">
                             Please enter a message
                         </Form.Message>
                     </div>
@@ -126,7 +126,7 @@ export default function ContactForm() {
                             disabled={emailStatus === EmailStatus.Sending}
                             className={clsx(
                                 "px-2 py-1 min-h-[5rem] text-background-950 bg-background-50 rounded-md border-2 border-background-50 text-base resize-y",
-                                "focus:border-primary-500 focus:!outline-none"
+                                "focus:border-primary focus:!outline-none"
                             )}
                         />
                     </Form.Control>
@@ -134,24 +134,24 @@ export default function ContactForm() {
             </Form.Field>
 
             {emailStatus === EmailStatus.Sent && (
-                <p className="text-text-50">
+                <p className="text-text">
                     Message sent successfully! Thanks for reaching out, I&apos;ll get back to you as soon as I can.
                 </p>
             )}
 
             {emailStatus === EmailStatus.Error && (
-                <p className="text-text-50">
+                <p className="text-text">
                     The message failed to send. Please try again.
                 </p>
             )}
 
             <Form.Submit className={clsx(
-                "px-2 py-1 w-24 h-10 flex flex-row justify-center items-center text-background-950 font-medium bg-secondary-300 text-xl text-center rounded-md transition-[background-color]",
+                "px-2 py-1 w-24 h-10 flex flex-row justify-center items-center text-background-950 font-medium bg-secondary text-xl text-center rounded-md transition-[background-color]",
                 "hover:bg-secondary-200"
             )}>
                 <Loader2Icon
                     className={clsx(
-                        "h-[1.5rem] w-[1.5rem] stroke-background-900 animate-spin",
+                        "h-[1.5rem] w-[1.5rem] stroke-background animate-spin",
                         { "hidden" : emailStatus !== EmailStatus.Sending },
                         { "inline-block" : emailStatus !== EmailStatus.Sending }
                     )}

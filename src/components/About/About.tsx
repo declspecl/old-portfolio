@@ -26,14 +26,14 @@ export default function About() {
                         </h2>
 
                         <h3 className={clsx(
-                            "text-2xl text-text-50"
+                            "text-2xl text-text"
                         )}>
                             I&apos;m Gavin, a student and software engineer.
                         </h3>
                     </div>
 
                     <div className={clsx(
-                        "grow flex flex-col gap-3 text-text-50 text-base",
+                        "grow flex flex-col gap-3 text-text text-base",
                         "lg:text-lg",
                         inter.className
                     )}>

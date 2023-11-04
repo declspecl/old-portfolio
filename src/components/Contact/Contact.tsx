@@ -16,7 +16,7 @@ export default function Contact() {
             <div className="flex flex-col gap-2">
                 <div className="flex flex-col gap-2">
                     <div className={clsx(
-                        "flex flex-col gap-0.5 text-base text-text-50 text-center",
+                        "flex flex-col gap-0.5 text-base text-text text-center",
                         "lg:text-lg",
                         "xl:w-10/12 xl:mx-auto"
                     )}>
@@ -29,14 +29,14 @@ export default function Contact() {
                         </p>
                     </div>
 
-                    <div className="w-full flex flex-row justify-center items-center gap-4 flex-wrap text-text-50">
+                    <div className="w-full flex flex-row justify-center items-center gap-4 flex-wrap text-text">
                         <a
                             href="https://github.com/declspecl"
                             target="_blank"
                             className="flex flex-row items-center gap-[6px] group"
                         >
                             <GithubIcon
-                                className="h-[1.25em] w-[1.25em] bg-text-800 stroke-text-50 rounded-md"
+                                className="h-[1.25em] w-[1.25em] bg-text-800 stroke-text rounded-md"
                             />
 
                             <span className="group-hover:underline">declspecl</span>
@@ -44,7 +44,7 @@ export default function Contact() {
 
                         <CircleIcon
                             className={clsx(
-                                "h-[0.35em] w-[0.35em] stroke-text-50 fill-text-50 hidden",
+                                "h-[0.35em] w-[0.35em] stroke-text fill-text hidden",
                                 "md:inline-block"
                             )}
                         />
@@ -55,7 +55,7 @@ export default function Contact() {
                             className="flex flex-row items-center gap-[6px] group"
                         >
                             <LinkedinIcon
-                                className="h-[1.25em] w-[1.25em] bg-primary-600 rounded-sm p-0.5 stroke-1 stroke-text-50 fill-text-50"
+                                className="h-[1.25em] w-[1.25em] bg-primary-600 rounded-sm p-0.5 stroke-1 stroke-text fill-text"
                             />
 
                             <span className="group-hover:underline">gavindhondt</span>
