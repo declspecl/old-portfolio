@@ -61,12 +61,12 @@ export default function Hero() {
                     inter.className
                 )}>
                     <div className={clsx(
-                        "basis-0 grow px-3 py-2 bg-secondary rounded-md transition-[background-color]",
+                        "basis-0 grow px-3 py-1.5 bg-secondary rounded-md transition-[background-color]",
                         "hover:bg-secondary-200"
                     )}>
                         <a
                             href="#about"
-                            className="inline-block min-w-[10ex] text-background-950 font-medium text-center"
+                            className="inline-block min-w-[10ex] text-background-950 text-center"
                         >
                             Learn more
                         </a>
@@ -80,7 +80,7 @@ export default function Hero() {
                             href="/resume.pdf"
                             target="_blank"
                             className={clsx(
-                                "mx-3 my-2 inline-block min-w-[10ex] text-text text-center",
+                                "mx-3 my-1.5 inline-block min-w-[10ex] text-text text-center",
                                 "hover:underline"
                             )}
                         >
