@@ -30,7 +30,7 @@ export default function Skills() {
 
                     <SkillGroup
                         title="Backend"
-                        skills={["Next.js", "PostgreSQL", "Axum", "AWS"]}
+                        skills={["Next.js", "Supabase", "PostgreSQL", "AWS", "Axum"]}
                     />
 
                     <SkillGroup
