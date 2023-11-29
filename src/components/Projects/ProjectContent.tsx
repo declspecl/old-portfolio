@@ -62,19 +62,6 @@ export default function ProjectContent({ name, scope, imagePath, imageDimensions
                 </div>
 
                 <div className={clsx("flex flex-col gap-1 text-base", "lg:text-lg")}>
-                    {repoLink && (
-                        <a
-                            href={repoLink}
-                            target="_blank"
-                            className={clsx(
-                                "flex flex-row items-center gap-1 text-text underline",
-                            )}
-                        >
-                            <span>View Repository</span>
-                            <ExternalLinkIcon className="w-4 h-4"/>
-                        </a>
-                    )}
-
                     {siteLink && (
                         <a
                             href={siteLink}
@@ -85,6 +72,19 @@ export default function ProjectContent({ name, scope, imagePath, imageDimensions
                         >
                             <span>View Website</span>
                             <ExternalLinkIcon className="w-4 h-4" />
+                        </a>
+                    )}
+
+                    {repoLink && (
+                        <a
+                            href={repoLink}
+                            target="_blank"
+                            className={clsx(
+                                "flex flex-row items-center gap-1 text-text underline",
+                            )}
+                        >
+                            <span>View Repository</span>
+                            <ExternalLinkIcon className="w-4 h-4"/>
                         </a>
                     )}
                 </div>

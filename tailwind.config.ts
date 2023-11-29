@@ -22,7 +22,7 @@ const config: Config = {
 			},
 
 			"background": {
-                "DEFAULT": "hsl(240, 12%, 10%)",
+                "DEFAULT": "hsl(240, 14%, 10%)",
 				50: "hsl(240, 12%, 95%)",
 				100: "hsl(240, 12%, 90%)",
 				200: "hsl(240, 12%, 80%)",

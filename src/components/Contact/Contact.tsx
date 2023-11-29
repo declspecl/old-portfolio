@@ -25,7 +25,7 @@ export default function Contact() {
                         </p>
 
                         <p>
-                            Also, check me out on the following platforms:
+                            Also, see me on the following platforms:
                         </p>
                     </div>
 

@@ -73,7 +73,7 @@ export default function ContactForm() {
                         ref={nameRef}
                         disabled={emailStatus === EmailStatus.Sending}
                         className={clsx(
-                            "px-2 py-1 text-background-950 bg-background-50 rounded-md border-2 border-background-50",
+                            "px-3 py-1.5 text-text-50 bg-background-800 border border-background-700 border-opacity-75 rounded-md",
                             "focus:border-primary focus:!outline-none"
                         )}
                     />
@@ -82,8 +82,8 @@ export default function ContactForm() {
 
             <Form.Field name="email" className="w-full" >
                 <div className="flex flex-col">
-                    <div className="flex flex-row justify-between text-text">
-                        <Form.Label>Email *</Form.Label>
+                    <div className="flex flex-row justify-between">
+                        <Form.Label className="text-text">Email <span className="text-primary-200">*</span></Form.Label>
 
                         <Form.Message match="valueMissing" className="text-secondary">
                             Please enter an email
@@ -100,7 +100,7 @@ export default function ContactForm() {
                         ref={emailRef}
                         disabled={emailStatus === EmailStatus.Sending}
                         className={clsx(
-                            "px-2 py-1 text-background-950 bg-background-50 rounded-md border-2 border-background-50",
+                            "px-3 py-1.5 text-text-50 bg-background-800 border border-background-700 border-opacity-75 rounded-md",
                             "focus:border-primary focus:!outline-none"
                         )}
                         required
@@ -112,7 +112,7 @@ export default function ContactForm() {
             <Form.Field className="w-full" name="message">
                 <div className="flex flex-col">
                     <div className="flex flex-row justify-between">
-                        <Form.Label className="text-text">Message *</Form.Label>
+                        <Form.Label className="text-text">Message <span className="text-primary-200">*</span></Form.Label>
 
                         <Form.Message match="valueMissing" className="text-secondary">
                             Please enter a message
@@ -125,7 +125,7 @@ export default function ContactForm() {
                             ref={messageRef}
                             disabled={emailStatus === EmailStatus.Sending}
                             className={clsx(
-                                "px-2 py-1 min-h-[5rem] text-background-950 bg-background-50 rounded-md border-2 border-background-50 text-base resize-y",
+                                "px-3 py-1.5 min-h-[6rem] text-text-50 bg-background-800 border border-background-700 border-opacity-75 rounded-md text-base resize-y",
                                 "focus:border-primary focus:!outline-none"
                             )}
                         />
@@ -146,7 +146,7 @@ export default function ContactForm() {
             )}
 
             <Form.Submit className={clsx(
-                "px-2 py-1 w-24 h-10 flex flex-row justify-center items-center text-background-950 font-medium bg-secondary text-xl text-center rounded-md transition-[background-color]",
+                "px-2 py-1 w-24 h-10 flex flex-row justify-center items-center text-background-950 bg-secondary text-xl text-center rounded-md transition-[background-color]",
                 "hover:bg-secondary-200"
             )}>
                 <Loader2Icon
