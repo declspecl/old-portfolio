@@ -61,7 +61,7 @@ export default function ContactForm() {
                         autoComplete="name"
                         disabled={liveEmailStatus === EmailStatus.Sending}
                         className={clsx(
-                            "px-3 py-1.5 text-text-50 bg-background-800 border border-background-700 border-opacity-75 rounded-md",
+                            "px-3 py-1.5 text-text-50 bg-background-800 bg-opacity-90 border border-background-700 border-opacity-75 rounded-md",
                             "focus:border-primary focus:!outline-none"
                         )}
                     />
@@ -87,7 +87,7 @@ export default function ContactForm() {
                         autoComplete="email"
                         disabled={liveEmailStatus === EmailStatus.Sending}
                         className={clsx(
-                            "px-3 py-1.5 text-text-50 bg-background-800 border border-background-700 border-opacity-75 rounded-md",
+                            "px-3 py-1.5 text-text-50 bg-background-800 bg-opacity-90 border border-background-700 border-opacity-75 rounded-md",
                             "focus:border-primary focus:!outline-none"
                         )}
                         required
@@ -111,7 +111,7 @@ export default function ContactForm() {
                             required
                             disabled={liveEmailStatus === EmailStatus.Sending}
                             className={clsx(
-                                "px-3 py-1.5 min-h-[6rem] text-text-50 bg-background-800 border border-background-700 border-opacity-75 rounded-md text-base resize-y",
+                                "px-3 py-1.5 min-h-[6rem] text-text-50 bg-background-800 bg-opacity-90 border border-background-700 border-opacity-75 rounded-md text-base resize-y",
                                 "focus:border-primary focus:!outline-none"
                             )}
                         />
