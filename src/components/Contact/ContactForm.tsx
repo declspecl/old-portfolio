@@ -4,7 +4,7 @@ import clsx from "clsx";
 import { Loader2Icon } from "lucide-react";
 import { SendEmail } from "@/actions/email";
 import * as Form from "@radix-ui/react-form";
-import { useState, experimental_useOptimistic, useRef } from "react";
+import { useState, useRef, useOptimistic } from "react";
 
 enum EmailStatus {
     NotSent,
@@ -15,7 +15,7 @@ enum EmailStatus {
 
 export default function ContactForm() {
     const [realEmailStatus, setRealEmailStatus] = useState<EmailStatus>(EmailStatus.NotSent);
-    const [liveEmailStatus, setLiveEmailStatus] = experimental_useOptimistic<EmailStatus>(EmailStatus.NotSent);
+    const [liveEmailStatus, setLiveEmailStatus] = useOptimistic<EmailStatus>(EmailStatus.NotSent);
 
     const formRef = useRef<HTMLFormElement>(null!);
 
