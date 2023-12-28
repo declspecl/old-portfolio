@@ -25,12 +25,12 @@ export default function Skills() {
                 )}>
                     <SkillGroup
                         title="Frontend"
-                        skills={["React", "Typescript", "TailwindCSS", "framer-motion", "react-spring"]}
+                        skills={["React", "Typescript", "TailwindCSS", "framer-motion", "Solid.js"]}
                     />
 
                     <SkillGroup
                         title="Backend"
-                        skills={["Next.js", "Supabase", "PostgreSQL", "AWS", "Axum"]}
+                        skills={["Next.js", "Supabase", "PostgreSQL", "AWS", "Actix-web", "Askama"]}
                     />
 
                     <SkillGroup

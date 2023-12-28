@@ -1,9 +1,10 @@
 "use client";
 
 import clsx from "clsx";
-import { useRef, useState } from "react";
 import { Loader2Icon } from "lucide-react";
+import { SendEmail } from "@/actions/email";
 import * as Form from "@radix-ui/react-form";
+import { useEffect, useState, useOptimistic, useRef } from "react";
 
 enum EmailStatus {
     NotSent,
@@ -13,55 +14,43 @@ enum EmailStatus {
 }
 
 export default function ContactForm() {
-    const [emailStatus, setEmailStatus] = useState(EmailStatus.NotSent);
+    const [realEmailStatus, setRealEmailStatus] = useState<EmailStatus>(EmailStatus.NotSent);
+    const [liveEmailStatus, setLiveEmailStatus] = useOptimistic<EmailStatus>(EmailStatus.NotSent);
 
-    const nameRef = useRef<HTMLInputElement>(null!);
-    const emailRef = useRef<HTMLInputElement>(null!);
-    const messageRef = useRef<HTMLTextAreaElement>(null!);
+    const formRef = useRef<HTMLFormElement>(null!);
 
-    async function sendEmail() {
-        const name = nameRef.current.value;
-        const email = emailRef.current.value;
-        const message = messageRef.current.value;
+    async function clientFormAction(formData: FormData) {
+        const name = formData.get("name") as string | undefined;
+        const email = formData.get("email") as string;
+        const message = formData.get("message") as string;
 
-        setEmailStatus(EmailStatus.Sending);
-
-        const res = await fetch("/api/email", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                name: name,
-                email: email,
-                message: message
-            })
-        });
-
-        if (res.status === 200) {
-            setEmailStatus(EmailStatus.Sent);
-
-            nameRef.current.value = "";
-            emailRef.current.value = "";
-            messageRef.current.value = "";
-        }
-        else {
-            setEmailStatus(EmailStatus.Error);
+        if (!email || !message) {
+            setLiveEmailStatus(EmailStatus.Error);
+            setRealEmailStatus(EmailStatus.Error);
+            return;
         }
 
-        return res;
-    }
+        setLiveEmailStatus(EmailStatus.Sending);
 
-    async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-        e.preventDefault();
+        try {
+            await SendEmail(name, email, message);
 
-        await sendEmail();
+            setLiveEmailStatus(EmailStatus.Sent);
+            setRealEmailStatus(EmailStatus.Sent);
+
+            formRef.current.reset();
+        }
+        catch (err) {
+            setLiveEmailStatus(EmailStatus.Error);
+            setRealEmailStatus(EmailStatus.Error);
+        }
     }
 
     return (
         <Form.Root
-            onSubmit={handleSubmit}
             className="w-full flex flex-col items-center gap-4 text-base lg:text-lg"
+            action={clientFormAction}
+            ref={formRef}
         >
             <Form.Field className="w-full" name="name">
                 <div className="flex flex-col">
@@ -70,8 +59,7 @@ export default function ContactForm() {
                     <Form.Control
                         type="text"
                         autoComplete="name"
-                        ref={nameRef}
-                        disabled={emailStatus === EmailStatus.Sending}
+                        disabled={liveEmailStatus === EmailStatus.Sending}
                         className={clsx(
                             "px-3 py-1.5 text-text-50 bg-background-800 border border-background-700 border-opacity-75 rounded-md",
                             "focus:border-primary focus:!outline-none"
@@ -97,8 +85,7 @@ export default function ContactForm() {
                     <Form.Control
                         type="email"
                         autoComplete="email"
-                        ref={emailRef}
-                        disabled={emailStatus === EmailStatus.Sending}
+                        disabled={liveEmailStatus === EmailStatus.Sending}
                         className={clsx(
                             "px-3 py-1.5 text-text-50 bg-background-800 border border-background-700 border-opacity-75 rounded-md",
                             "focus:border-primary focus:!outline-none"
@@ -122,8 +109,7 @@ export default function ContactForm() {
                     <Form.Control asChild>
                         <textarea
                             required
-                            ref={messageRef}
-                            disabled={emailStatus === EmailStatus.Sending}
+                            disabled={liveEmailStatus === EmailStatus.Sending}
                             className={clsx(
                                 "px-3 py-1.5 min-h-[6rem] text-text-50 bg-background-800 border border-background-700 border-opacity-75 rounded-md text-base resize-y",
                                 "focus:border-primary focus:!outline-none"
@@ -133,13 +119,13 @@ export default function ContactForm() {
                 </div>
             </Form.Field>
 
-            {emailStatus === EmailStatus.Sent && (
+            {realEmailStatus === EmailStatus.Sent && (
                 <p className="text-text">
                     Message sent successfully! Thanks for reaching out, I&apos;ll get back to you as soon as I can.
                 </p>
             )}
 
-            {emailStatus === EmailStatus.Error && (
+            {realEmailStatus === EmailStatus.Error && (
                 <p className="text-text">
                     The message failed to send. Please try again.
                 </p>
@@ -152,14 +138,14 @@ export default function ContactForm() {
                 <Loader2Icon
                     className={clsx(
                         "h-[1.5rem] w-[1.5rem] stroke-background animate-spin",
-                        { "hidden" : emailStatus !== EmailStatus.Sending },
-                        { "inline-block" : emailStatus !== EmailStatus.Sending }
+                        { "hidden" : liveEmailStatus !== EmailStatus.Sending },
+                        { "inline-block" : liveEmailStatus !== EmailStatus.Sending }
                     )}
                 />
 
                 <span className={clsx(
-                    { "inline" : emailStatus !== EmailStatus.Sending },
-                    { "hidden": emailStatus === EmailStatus.Sending }
+                    { "inline" : liveEmailStatus !== EmailStatus.Sending },
+                    { "hidden": liveEmailStatus === EmailStatus.Sending }
                 )}>Send</span>
             </Form.Submit>
         </Form.Root>
