@@ -20,7 +20,7 @@ export default function ProjectContent({ name, scope, imagePath, imageDimensions
         <div
             ref={scope}
             className={clsx(
-                "mt-0 flex flex-col gap-4 h-0 opacity-0 overflow-hidden",
+                "mt-0 flex flex-col gap-2 h-0 opacity-0 overflow-hidden",
                 "lg:grid lg:grid-cols-2",
                 inter.className
             )}

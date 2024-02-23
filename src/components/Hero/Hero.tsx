@@ -50,7 +50,7 @@ export default function Hero() {
                         "lg:text-lg",
                         inter.className
                     )}>
-                        I&apos;m a software engineer studying Computer Science at Oakland University. I&apos;m actively seeking internship opportunities and freelance web development jobs.
+                        I&apos;m a passionate programmer and student studying Computer Science at Oakland University. I&apos;m actively seeking internship/co-op opportunities and freelance web development jobs.
                     </p>
                 </div>
 

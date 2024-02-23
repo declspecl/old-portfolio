@@ -38,13 +38,13 @@ export default function About() {
                         inter.className
                     )}>
                         <p>
-                            I have been programming for over 6 years, and it is by far my greatest passion.
+                            I am currently a sophomore at Oakland University for Computer Science.
+                            I have a 4.0 GPA after completing 41 credits, and I am expected to graduate in April 2026.
                         </p>
 
                         <p>
-                            I went to an International Baccalaureate high school, graduating with a 4.2 GPA as a valedictorian and receiving my IB Diploma.
-                            During this time, I took a higher level computer science class for 2 years, achieving the highest score in my school.
-                            Currently, I attend Oakland University, majoring in Computer Science.
+                            I have been programming for over 6 years, and it is by far my greatest passion.
+                            I love sharing this passion with others, be it through tutoring, casual teaching, or building projects with my friends.
                         </p>
 
                         <p>
