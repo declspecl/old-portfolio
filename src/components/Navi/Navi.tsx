@@ -9,7 +9,7 @@ export default function Navi() {
             "hover:bg-opacity-90"
         )}>
             <div className={clsx(
-                "mx-auto my-5 w-[90%] flex flex-row justify-center items-center text-text text-base",
+                "mx-auto my-8 w-[90%] flex flex-row justify-center items-center text-text text-base",
                 "md:justify-between",
                 "xl:mx-32 xl:w-auto",
                 inter.className
@@ -34,6 +34,7 @@ export default function Navi() {
                     <a href="#skills" className="hover:underline">Skills</a>
                     <a href="#contact" className="hover:underline">Contact</a>
                     <a href="/resume.pdf" target="_blank" className="hover:underline">Resumé</a>
+                    <a href="https://blog.gavindhondt.com" target="_blank" className="hover:underline">Blog</a>
                 </div>
             </div>
         </div>

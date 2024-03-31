@@ -23,10 +23,6 @@ export default function Contact() {
                         <p>
                             Thanks for reaching out! Feel free to use this form to message me. Alternatively, <a href="mailto:gavind2559@gmail.com" className="underline">send me an email</a>.
                         </p>
-
-                        <p>
-                            Also, see me on the following platforms:
-                        </p>
                     </div>
 
                     <div className="w-full flex flex-row justify-center items-center gap-4 flex-wrap text-text">

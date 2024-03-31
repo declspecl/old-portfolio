@@ -44,12 +44,16 @@ export default function About() {
 
                         <p>
                             I have been programming for over 6 years, and it is by far my greatest passion.
-                            I love sharing this passion with others, be it through tutoring, casual teaching, or building projects with my friends.
+                            I love sharing this passion with others, be it through tutoring, mentorship, or forcing my friends to build projects with me.
                         </p>
 
                         <p>
                             Outside of academics, I enjoy playing video games, playing instruments, and, generally, learning.
-                            I am always learning something, whether it be a new computer science concept, a new song, or a new skill.
+                            I love to chat with people and learn about their interests, so please, feel free to <a href="#contact" className="underline">contact me</a>!
+                        </p>
+
+                        <p>
+                            Also, if you would like to learn more about me, check out my <a href="https://blog.gavindhondt.com" target="_blank" className="underline">blog website</a>!
                         </p>
                     </div>
                 </div>

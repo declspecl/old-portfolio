@@ -16,8 +16,8 @@ export default function Skills() {
                     "xl:w-10/12 xl:mx-auto",
                     inter.className
                 )}>
-                    Most of all, I love working with low level languages, and I spend most of my time working in Rust or C++.
-                    I also enjoy web development, so I have gathered a wide range of skills from various different branches of computer science.
+                    I have extensive experience in building full-stack applications, and I love to tinker in my free time.
+                    I aim to build highly performant products that provide first-class accessibility, interactivity, and user experience.
                 </p>
 
                 <div className={clsx(
@@ -31,7 +31,7 @@ export default function Skills() {
 
                     <SkillGroup
                         title="Backend"
-                        skills={["Next.js", "Supabase", "PostgreSQL", "AWS", "Actix-web"]}
+                        skills={["Next.js", "Supabase", "PostgreSQL", "AWS", "Axum"]}
                     />
 
                     <SkillGroup
