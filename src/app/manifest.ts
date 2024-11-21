@@ -4,7 +4,7 @@ export default function manifest(): MetadataRoute.Manifest {
     return {
         name: "Gavin D'Hondt Portfolio - Software Engineer and Student from Michigan",
         short_name: "Gavin D'Hondt Portfolio",
-        description: "I'm Gavin D'Hondt. I'm a software engineer studying Computer Science at Oakland University. I'm actively seeking internship opportunities and freelance web development jobs.",
+        description: "I'm Gavin D'Hondt. I'm a Jr. SDE at Amazon and student for Computer Science at Oakland University",
         start_url: "/",
         display: "standalone",
         background_color: "#16161b",

@@ -50,7 +50,8 @@ export default function Hero() {
                         "lg:text-lg",
                         inter.className
                     )}>
-                        I&apos;m a passionate programmer and student studying Computer Science at Oakland University. I&apos;m actively seeking internship/co-op opportunities and freelance web development jobs.
+                        I'm a motivated student and Junior Software Engineer working at Amazon.
+                        I'm experienced in developing scalable and performant full-stack solutions with a focus on cloud technologies, as well as an aspiring leader and mentor who kindles a passion for learning in others.
                     </p>
                 </div>
 

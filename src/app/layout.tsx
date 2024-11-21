@@ -6,13 +6,13 @@ import { Analytics } from "@vercel/analytics/react";
 export const metadata: Metadata =
 {
     title: "Gavin D'Hondt",
-    description: "I'm Gavin D'Hondt. I'm a software engineer studying Computer Science at Oakland University. I'm actively seeking internship opportunities and freelance web development jobs.",
+    description: "I'm Gavin D'Hondt. I'm a Jr. SDE at Amazon and student for Computer Science at Oakland University",
     authors: { name: "Gavin D'Hondt" },
     keywords: ["Gavin D'Hondt", "Software engineer", "Student", "Rust", "C++", "React", "Developer", "Oakland University", "Michigan", "Programmer"],
     metadataBase: new URL("https://www.gavindhondt.com"),
     openGraph: {
         title: "Gavin D'Hondt",
-        description: "I'm Gavin D'Hondt. I'm a software engineer studying Computer Science at Oakland University. I'm actively seeking internship opportunities and freelance web development jobs.",
+        description: "I'm Gavin D'Hondt. I'm a Jr. SDE at Amazon and student for Computer Science at Oakland University",
         url: "https://www.gavindhondt.com",
         images: "/opengraph-image.png"
     }
