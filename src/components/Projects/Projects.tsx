@@ -37,18 +37,6 @@ export default function Projects() {
                 <Separator.Root decorative orientation="horizontal" className="w-full h-[1px] bg-text opacity-50" />
 
                 <Project
-                    name="Haley Puri Portfolio"
-                    imagePath="/haley-portfolio.webp"
-                    imageDimensions={{ width: 768, height: 432 }}
-                    description="I constructed this website for my client Haley Puri to provide him a platform to share his art and brand himself online. Using Next.js, I created a highly interactive and elegant website that showcases his talents concisely."
-                    technologies={["React", "Next.js", "TailwindCSS", "Radix UI", "framer-motion", "Resend"]}
-                    siteLink="https://haleypuri.com"
-                    animationDelay={1275}
-                />
-
-                <Separator.Root decorative orientation="horizontal" className="w-full h-[1px] bg-text opacity-50" />
-
-                <Project
                     name="pow"
                     imagePath="/pow.webp"
                     imageDimensions={{ width: 917, height: 572 }}
